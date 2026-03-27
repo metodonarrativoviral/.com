@@ -1,507 +1,717 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Método Narrativo Viral - Oficial 🚀</title>
-    
-    <!-- Tailwind CSS v4 -->
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
-    
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: black;
-            color: white;
-            margin: 0;
-            overflow-x: hidden;
-        }
-        ::selection {
-            background: #dc2626;
-            color: white;
-        }
-        html {
-            scroll-behavior: smooth;
-        }
-        .bg-grid {
-            background-image: radial-gradient(#ffffff 1px, transparent 1px);
-            background-size: 40px 40px;
-        }
-        .glow-red {
-            text-shadow: 0 0 15px rgba(220, 38, 38, 0.5);
-        }
-        .glow-yellow {
-            box-shadow: 0 0 30px rgba(234, 179, 8, 0.2);
-        }
-        details > summary {
-            list-style: none;
-        }
-        details > summary::-webkit-details-marker {
-            display: none;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Método Narrativo Viral</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #130202;
+      --bg-2: #2a0000;
+      --bg-3: #4e0000;
+      --card: rgba(255,255,255,.035);
+      --line: rgba(255,255,255,.09);
+      --text: #fff7f7;
+      --muted: #f0b7b7;
+      --soft: #e4b7b7;
+      --pink: #ebbbbb;
+      --rose: #ee8f8f;
+      --coral: #fa6464;
+      --hot: #ff2d2d;
+      --red: #f41919;
+      --deep: #a00000;
+      --shadow: 0 24px 80px rgba(244, 25, 25, .22);
+      --shadow-soft: 0 18px 50px rgba(0, 0, 0, .28);
+      --radius: 28px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, sans-serif;
+      background:
+        radial-gradient(circle at 15% 0%, rgba(235,187,187,.08), transparent 22%),
+        radial-gradient(circle at 100% 0%, rgba(244,25,25,.12), transparent 28%),
+        linear-gradient(180deg, #110101 0%, #1f0202 22%, #320101 58%, #150101 100%);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    .grain::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      opacity: .08;
+      background-image:
+        radial-gradient(rgba(255,255,255,.6) .45px, transparent .55px);
+      background-size: 16px 16px;
+      mask-image: linear-gradient(to bottom, rgba(0,0,0,.9), rgba(0,0,0,.45));
+    }
+
+    .section-shell {
+      position: relative;
+      border: 1px solid rgba(255,255,255,.06);
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.045), rgba(255,255,255,.02)),
+        radial-gradient(circle at top left, rgba(238,143,143,.06), transparent 26%),
+        linear-gradient(180deg, rgba(125,0,0,.26), rgba(15,0,0,.45));
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.05);
+      overflow: hidden;
+    }
+
+    .section-shell::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background:
+        linear-gradient(135deg, rgba(255,255,255,.03), transparent 24%),
+        linear-gradient(0deg, transparent, rgba(255,255,255,.015));
+    }
+
+    .glass {
+      background: rgba(255,255,255,.04);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255,255,255,.08);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .headline {
+      letter-spacing: -.06em;
+      line-height: .93;
+    }
+
+    .accent {
+      color: var(--hot);
+      text-shadow: 0 0 24px rgba(255, 45, 45, .22);
+    }
+
+    .accent-soft { color: var(--rose); }
+
+    .btn-glow {
+      position: relative;
+      overflow: hidden;
+      isolation: isolate;
+      background: linear-gradient(135deg, var(--hot), var(--red) 55%, var(--deep));
+      box-shadow:
+        0 0 0 1px rgba(255,255,255,.05) inset,
+        0 12px 34px rgba(244,25,25,.28),
+        0 0 36px rgba(244,25,25,.18);
+      transition: transform .18s ease, box-shadow .22s ease, filter .22s ease;
+    }
+
+    .btn-glow::before {
+      content: "";
+      position: absolute;
+      inset: -40%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,.28), transparent);
+      transform: translateX(-120%) rotate(12deg);
+      transition: transform .65s ease;
+      z-index: -1;
+    }
+
+    .btn-glow:hover {
+      transform: translateY(-2px) scale(1.01);
+      filter: brightness(1.04);
+      box-shadow:
+        0 0 0 1px rgba(255,255,255,.06) inset,
+        0 16px 42px rgba(244,25,25,.34),
+        0 0 50px rgba(244,25,25,.26);
+    }
+
+    .btn-glow:hover::before { transform: translateX(120%) rotate(12deg); }
+
+    .card-hover {
+      transition: transform .22s ease, border-color .22s ease, box-shadow .22s ease, background .22s ease;
+      position: relative;
+    }
+
+    .card-hover::before {
+      content: "+";
+      position: absolute;
+      top: 18px;
+      right: 20px;
+      width: 34px;
+      height: 34px;
+      border-radius: 999px;
+      display: grid;
+      place-items: center;
+      color: rgba(255,255,255,.6);
+      border: 1px solid rgba(255,255,255,.1);
+      background: rgba(255,255,255,.03);
+      transition: all .2s ease;
+      font-size: 18px;
+      font-weight: 800;
+    }
+
+    .card-hover:hover {
+      transform: translateY(-6px);
+      border-color: rgba(255,45,45,.38);
+      box-shadow: 0 22px 48px rgba(0,0,0,.28), 0 0 0 1px rgba(255,45,45,.12) inset;
+      background: rgba(255,255,255,.05);
+    }
+
+    .card-hover:hover::before {
+      color: white;
+      background: rgba(255,45,45,.18);
+      border-color: rgba(255,45,45,.4);
+      transform: rotate(45deg);
+      box-shadow: 0 0 20px rgba(255,45,45,.18);
+    }
+
+    .video-wrap {
+      position: relative;
+      border-radius: 34px;
+      padding: 14px;
+      background:
+        linear-gradient(135deg, rgba(255,255,255,.08), rgba(255,255,255,.02)),
+        linear-gradient(145deg, rgba(255,45,45,.16), rgba(64,0,0,.38));
+      border: 1px solid rgba(255,255,255,.09);
+      box-shadow: 0 28px 90px rgba(0,0,0,.42), 0 0 60px rgba(244,25,25,.12);
+    }
+
+    .video-wrap::before {
+      content: "";
+      position: absolute;
+      inset: -1px;
+      border-radius: 34px;
+      padding: 1px;
+      background: linear-gradient(135deg, rgba(255,255,255,.15), rgba(255,45,45,.26), rgba(255,255,255,.04));
+      -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+      -webkit-mask-composite: xor;
+              mask-composite: exclude;
+      pointer-events: none;
+    }
+
+    .video-label {
+      position: absolute;
+      top: 26px;
+      left: 26px;
+      z-index: 4;
+      background: rgba(12,0,0,.66);
+      border: 1px solid rgba(255,255,255,.08);
+      backdrop-filter: blur(10px);
+    }
+
+    .ticker {
+      white-space: nowrap;
+      overflow: hidden;
+      position: relative;
+      border-top: 1px solid rgba(255,255,255,.07);
+      border-bottom: 1px solid rgba(255,255,255,.07);
+      background: linear-gradient(90deg, rgba(255,255,255,.03), rgba(255,255,255,.01));
+    }
+
+    .ticker-track {
+      display: inline-flex;
+      gap: 44px;
+      padding: 16px 0;
+      animation: scroll 28s linear infinite;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .22em;
+      color: var(--soft);
+      font-weight: 700;
+    }
+
+    @keyframes scroll {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    .purchase-stack {
+      position: fixed;
+      left: 16px;
+      bottom: 16px;
+      z-index: 60;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      pointer-events: none;
+    }
+
+    .purchase-toast {
+      min-width: 270px;
+      max-width: 340px;
+      padding: 14px 14px 14px 16px;
+      border-radius: 18px;
+      background: rgba(18, 3, 3, .88);
+      border: 1px solid rgba(255,255,255,.08);
+      box-shadow: 0 18px 38px rgba(0,0,0,.35), 0 0 26px rgba(244,25,25,.12);
+      backdrop-filter: blur(14px);
+      transform: translateY(18px);
+      opacity: 0;
+      animation: toastIn .35s ease forwards, toastOut .35s ease forwards 5.1s;
+    }
+
+    @keyframes toastIn {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes toastOut {
+      to { opacity: 0; transform: translateY(12px); }
+    }
+
+    .pulse-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      background: var(--hot);
+      box-shadow: 0 0 0 0 rgba(255,45,45,.6);
+      animation: pulse 1.8s infinite;
+    }
+
+    @keyframes pulse {
+      70% { box-shadow: 0 0 0 12px rgba(255,45,45,0); }
+      100% { box-shadow: 0 0 0 0 rgba(255,45,45,0); }
+    }
+
+    .faq-item[open] summary { color: white; }
+    .faq-item summary { list-style: none; }
+    .faq-item summary::-webkit-details-marker { display: none; }
+
+    .faq-icon {
+      transition: transform .2s ease, background .2s ease, border-color .2s ease;
+    }
+
+    .faq-item[open] .faq-icon {
+      transform: rotate(45deg);
+      background: rgba(255,45,45,.16);
+      border-color: rgba(255,45,45,.38);
+    }
+
+    .mobile-cta {
+      box-shadow: 0 18px 42px rgba(244,25,25,.3), 0 0 40px rgba(244,25,25,.18);
+    }
+
+    @media (max-width: 768px) {
+      .purchase-stack { left: 12px; right: 12px; bottom: 84px; }
+      .purchase-toast { min-width: 0; max-width: none; width: 100%; }
+    }
+  </style>
 </head>
-<body class="bg-black text-white">
+<body>
+  <div class="purchase-stack" id="purchaseStack"></div>
 
-    <!-- 1. HERO SECTION -->
-    <section class="relative pt-16 pb-20 overflow-hidden bg-black">
-        <div class="absolute inset-0 opacity-10 pointer-events-none bg-grid"></div>
-        
-        <div class="container mx-auto px-4 text-center relative z-10">
-            <!-- Logo -->
-            <div class="flex flex-col items-center mb-4 md:mb-12">
-                <div class="flex flex-col items-center leading-none">
-                    <span class="text-[9px] md:text-lg font-bold text-white tracking-[0.2em] uppercase mb-1 md:mb-2">MÉTODO</span>
-                    <span class="text-base md:text-3xl font-black text-red-600 tracking-tighter uppercase italic glow-red">NARRATIVO VIRAL</span>
-                    <div class="h-px w-full bg-gradient-to-r from-transparent via-red-600 to-transparent my-1 md:my-2"></div>
-                    <span class="text-[5px] md:text-[8px] font-bold text-gray-400 tracking-[0.1em] md:tracking-[0.2em] uppercase">Construa um canal que não depende de tendências</span>
-                </div>
-            </div>
-
-            <h1 class="text-2xl md:text-4xl font-medium text-white mb-8 leading-tight tracking-tight max-w-5xl mx-auto">
-                O método que está <span class="font-black">MUDANDO O JOGO</span> dos canais Dark. ⚡ <br />
-                <span class="text-red-600 font-black text-4xl md:text-6xl block my-4 uppercase tracking-tighter drop-shadow-[0_0_10px_rgba(220,38,38,0.3)]">
-                    Transforme histórias narradas em conteúdo viral
-                </span>
-                lucrando em dólar e sem aparecer! 💸
-            </h1>
-            
-            <p class="text-gray-500 text-xs font-bold tracking-[0.3em] uppercase mb-8">
-                👇 ASSISTA AO VÍDEO ABAIXO 👇
-            </p>
-
-            <!-- Wistia Player -->
-            <div class="w-full max-w-4xl mx-auto mb-16 aspect-video bg-black rounded-lg overflow-hidden shadow-2xl border border-white/5">
-                <iframe src="https://fast.wistia.net/embed/iframe/o27s1fh4rn" title="Wistia video player" allow="autoplay; fullscreen" frameborder="0" scrolling="no" class="w-full h-full" allowfullscreen></iframe>
-            </div>
-
-            <!-- CTA Hero -->
-            <div class="flex flex-col items-center gap-4">
-                <a href="#checkout" class="w-full md:w-auto px-12 py-6 bg-red-600 text-white text-2xl font-black rounded-2xl shadow-[0_0_40px_rgba(220,38,38,0.3)] hover:bg-red-700 transition-all transform hover:-translate-y-1 active:scale-95 uppercase italic tracking-tighter inline-block no-underline">
-                    QUERO ACESSO À ÁREA DE MEMBROS AGORA! 🔓
-                </a>
-                <div class="flex items-center gap-2 text-gray-500 text-sm font-medium">
-                    <i data-lucide="zap" class="text-yellow-500 w-4 h-4"></i>
-                    <span>Acesso imediato após a confirmação</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 2. PAIN SECTION -->
-    <section class="py-24 bg-zinc-950 border-y border-white/5">
-        <div class="container mx-auto px-4">
-            <div class="max-w-4xl mx-auto">
-                <div class="text-center mb-16">
-                    <span class="text-red-600 font-bold tracking-widest uppercase text-sm">A VERDADE INCÔMODA DO MERCADO ⚠️</span>
-                    <h2 class="text-3xl md:text-5xl font-black text-white mt-4 mb-8 leading-tight">
-                        POR QUE A MAIORIA FRACASSA <br /> COM <span class="text-red-600">CANAIS DARK?</span>
-                    </h2>
-                </div>
-
-                <div class="grid md:grid-cols-2 gap-6 mb-16">
-                    <div class="flex gap-4 p-6 bg-zinc-900 border border-white/5 rounded-2xl">
-                        <i data-lucide="alert-circle" class="text-red-600 shrink-0 w-6 h-6"></i>
-                        <p class="text-gray-300 font-medium">Te mostram nichos do momento, mas ninguém avisa que eles morrem em semanas. 📉</p>
-                    </div>
-                    <div class="flex gap-4 p-6 bg-zinc-900 border border-white/5 rounded-2xl">
-                        <i data-lucide="alert-circle" class="text-red-600 shrink-0 w-6 h-6"></i>
-                        <p class="text-gray-300 font-medium">Você cria um canal, investe tempo, e quando o nicho satura... o canal vai junto. 🕳️</p>
-                    </div>
-                    <div class="flex gap-4 p-6 bg-zinc-900 border border-white/5 rounded-2xl">
-                        <i data-lucide="alert-circle" class="text-red-600 shrink-0 w-6 h-6"></i>
-                        <p class="text-gray-300 font-medium">Muito esforço, pouca consistência. Resultados que somem tão rápido quanto aparecem. 💨</p>
-                    </div>
-                    <div class="flex gap-4 p-6 bg-zinc-900 border border-white/5 rounded-2xl">
-                        <i data-lucide="alert-circle" class="text-red-600 shrink-0 w-6 h-6"></i>
-                        <p class="text-gray-300 font-medium">Te ensinam o básico: escolhe um nicho viral da gringa e copia. Só que isso não funciona mais. 🚫</p>
-                    </div>
-                    <div class="flex gap-4 p-6 bg-zinc-900 border border-white/5 rounded-2xl">
-                        <i data-lucide="alert-circle" class="text-red-600 shrink-0 w-6 h-6"></i>
-                        <p class="text-gray-300 font-medium">A frustração de quem segue tendência sem estrutura é sempre a mesma: recomeçar do zero. 🔄</p>
-                    </div>
-                    <div class="flex gap-4 p-6 bg-zinc-900 border border-white/5 rounded-2xl">
-                        <i data-lucide="alert-circle" class="text-red-600 shrink-0 w-6 h-6"></i>
-                        <p class="text-gray-300 font-medium">O problema não é falta de vontade. O problema é que ninguém te ensinou um método de verdade. 🛠️</p>
-                    </div>
-                </div>
-
-                <div class="bg-zinc-900 p-8 rounded-3xl border border-white/5 text-gray-300 space-y-6 leading-relaxed">
-                    <p class="text-white font-bold text-xl italic border-l-4 border-red-600 pl-6 py-2">
-                        "Se o seu modelo depende de tendência, você não tem um negócio. Você tem uma aposta." 🎲
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 3. SOLUTION SECTION (POR QUE É DIFERENTE) -->
-    <section class="py-24 bg-black">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16">
-                <span class="text-red-600 font-bold tracking-widest uppercase text-sm">O QUE MUDA TUDO ✨</span>
-                <h2 class="text-3xl md:text-5xl font-black text-white mt-4 mb-8">
-                    POR QUE O MÉTODO NARRATIVO <br /> VIRAL É <span class="text-red-600">DIFERENTE</span>
-                </h2>
-            </div>
-
-            <!-- 4 Diferenciais -->
-            <div class="grid md:grid-cols-4 gap-6 mb-24 text-center">
-                <div class="p-6 bg-zinc-900 rounded-2xl border border-white/5">
-                    <h3 class="text-white font-bold mb-2">Fim da Dependência 🔗</h3>
-                    <p class="text-gray-400 text-sm">O problema não é criar conteúdo. É depender de tendências que morrem.</p>
-                </div>
-                <div class="p-6 bg-zinc-900 rounded-2xl border border-white/5">
-                    <h3 class="text-white font-bold mb-2">Estrutura Real 🏗️</h3>
-                    <p class="text-gray-400 text-sm">O Método Narrativo Viral entrega estrutura. Não é improviso, é método.</p>
-                </div>
-                <div class="p-6 bg-zinc-900 rounded-2xl border border-white/5">
-                    <h3 class="text-white font-bold mb-2">Anti-Saturação 🛡️</h3>
-                    <p class="text-gray-400 text-sm">Histórias narradas não saturam. Elas prendem, engajam e escalam.</p>
-                </div>
-                <div class="p-6 bg-zinc-900 rounded-2xl border border-white/5">
-                    <h3 class="text-white font-bold mb-2">Base Sólida 💎</h3>
-                    <p class="text-gray-400 text-sm">Enquanto outros correm atrás de hype, você constrói uma base sólida.</p>
-                </div>
-            </div>
-
-            <!-- 6 Benefícios -->
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="p-8 bg-zinc-900 border border-white/5 rounded-3xl hover:border-red-600/50 transition-all group">
-                    <div class="w-12 h-12 bg-white/5 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                        <i data-lucide="target" class="text-red-600"></i>
-                    </div>
-                    <h3 class="text-lg font-black text-white mb-3 tracking-tight uppercase">ALTO PODER DE RETENÇÃO 🧲</h3>
-                    <p class="text-gray-400 leading-relaxed text-sm">Histórias narradas despertam curiosidade e prendem a atenção do início ao fim. O algoritmo ama isso.</p>
-                </div>
-                <div class="p-8 bg-zinc-900 border border-white/5 rounded-3xl hover:border-red-600/50 transition-all group">
-                    <div class="w-12 h-12 bg-white/5 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                        <i data-lucide="clock" class="text-red-600"></i>
-                    </div>
-                    <h3 class="text-lg font-black text-white mb-3 tracking-tight uppercase">PERFORMANCE DURADOURA ⏳</h3>
-                    <p class="text-gray-400 leading-relaxed text-sm">Conteúdos narrativos continuam performando muito tempo depois de publicados. São vídeos que trabalham por você.</p>
-                </div>
-                <div class="p-8 bg-zinc-900 border border-white/5 rounded-3xl hover:border-red-600/50 transition-all group">
-                    <div class="w-12 h-12 bg-white/5 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                        <i data-lucide="shield-check" class="text-red-600"></i>
-                    </div>
-                    <h3 class="text-lg font-black text-white mb-3 tracking-tight uppercase">ESTABILIDADE REAL ✅</h3>
-                    <p class="text-gray-400 leading-relaxed text-sm">Não dependem de hype passageiro. São um formato muito mais estável e profissional.</p>
-                </div>
-                <div class="p-8 bg-zinc-900 border border-white/5 rounded-3xl hover:border-red-600/50 transition-all group">
-                    <div class="w-12 h-12 bg-white/5 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                        <i data-lucide="sparkles" class="text-red-600"></i>
-                    </div>
-                    <h3 class="text-lg font-black text-white mb-3 tracking-tight uppercase">CURIOSIDADE NATURAL 🧠</h3>
-                    <p class="text-gray-400 leading-relaxed text-sm">Histórias ativam gatilhos psicológicos que fazem as pessoas assistirem até o final.</p>
-                </div>
-                <div class="p-8 bg-zinc-900 border border-white/5 rounded-3xl hover:border-red-600/50 transition-all group">
-                    <div class="w-12 h-12 bg-white/5 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                        <i data-lucide="trending-up" class="text-red-600"></i>
-                    </div>
-                    <h3 class="text-lg font-black text-white mb-3 tracking-tight uppercase">ESCALABILIDADE COMPROVADA 📈</h3>
-                    <p class="text-gray-400 leading-relaxed text-sm">Quanto mais conteúdo você publica, maior o efeito bola de neve em seus resultados.</p>
-                </div>
-                <div class="p-8 bg-zinc-900 border border-white/5 rounded-3xl hover:border-red-600/50 transition-all group">
-                    <div class="w-12 h-12 bg-white/5 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                        <i data-lucide="zap" class="text-red-600"></i>
-                    </div>
-                    <h3 class="text-lg font-black text-white mb-3 tracking-tight uppercase">PRODUÇÃO RÁPIDA ⚡</h3>
-                    <p class="text-gray-400 leading-relaxed text-sm">Com o método certo, você produz conteúdo de alta qualidade em uma fração do tempo.</p>
-                </div>
-            </div>
-
-            <!-- Texto de Autoridade -->
-            <div class="mt-20 p-10 bg-red-600/5 border border-red-600/20 rounded-[40px] text-center max-w-4xl mx-auto">
-                <p class="text-xl text-gray-300 leading-relaxed">
-                    Canais como <span class="text-white font-bold">MrBallen, Nexpo, rSlash, Redditor e Mr. Nightmare</span> mostram uma coisa em comum: eles não dependem de um nicho específico. Eles simplesmente contam boas histórias e as pessoas assistem.
-                </p>
-                <p class="text-xl text-gray-300 leading-relaxed mt-4">
-                    Não é sobre tendência, algoritmo ou formato do momento. É sobre narrativa, retenção e construção de curiosidade do início ao fim.
-                </p>
-                <p class="text-white font-bold text-2xl mt-6 italic">
-                    O Método Narrativo Viral te dá exatamente isso: a estrutura para criar conteúdo que prende, engaja e escala <span class="underline decoration-red-600 underline-offset-4">sem depender de modinha</span>. 🚀
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- 4. PARA QUEM É ESTE MÉTODO? -->
-    <section class="py-24 bg-zinc-950 border-y border-white/5">
-        <div class="container mx-auto px-4">
-            <div class="max-w-5xl mx-auto">
-                <div class="text-center mb-16">
-                    <h2 class="text-3xl md:text-5xl font-black text-white mb-4 uppercase italic">PARA QUEM É ESTE <span class="text-red-600">MÉTODO? 🤔</span></h2>
-                    <p class="text-gray-400">Se você se identifica com algum desses pontos, este treinamento foi feito para você.</p>
-                </div>
-
-                <div class="grid md:grid-cols-2 gap-8">
-                    <div class="p-8 bg-zinc-900 rounded-3xl border border-white/5 flex gap-4">
-                        <div class="shrink-0 w-12 h-12 bg-red-600/10 rounded-xl flex items-center justify-center">
-                            <i data-lucide="user-plus" class="text-red-600"></i>
-                        </div>
-                        <div>
-                            <h3 class="text-white font-bold mb-2">Iniciantes Absolutos</h3>
-                            <p class="text-gray-400 text-sm">Para quem quer começar a ganhar dinheiro na internet mas não sabe por onde começar e tem medo de aparecer.</p>
-                        </div>
-                    </div>
-                    <div class="p-8 bg-zinc-900 rounded-3xl border border-white/5 flex gap-4">
-                        <div class="shrink-0 w-12 h-12 bg-red-600/10 rounded-xl flex items-center justify-center">
-                            <i data-lucide="wallet" class="text-red-600"></i>
-                        </div>
-                        <div>
-                            <h3 class="text-white font-bold mb-2">Baixo Investimento</h3>
-                            <p class="text-gray-400 text-sm">Ideal para quem quer construir um negócio lucrativo sem precisar investir fortunas em equipamentos ou anúncios.</p>
-                        </div>
-                    </div>
-                    <div class="p-8 bg-zinc-900 rounded-3xl border border-white/5 flex gap-4">
-                        <div class="shrink-0 w-12 h-12 bg-red-600/10 rounded-xl flex items-center justify-center">
-                            <i data-lucide="clock" class="text-red-600"></i>
-                        </div>
-                        <div>
-                            <h3 class="text-white font-bold mb-2">Pouco Tempo Livre</h3>
-                            <p class="text-gray-400 text-sm">Para quem trabalha ou estuda e precisa de um método otimizado que permita criar vídeos rápidos e eficientes.</p>
-                        </div>
-                    </div>
-                    <div class="p-8 bg-zinc-900 rounded-3xl border border-white/5 flex gap-4">
-                        <div class="shrink-0 w-12 h-12 bg-red-600/10 rounded-xl flex items-center justify-center">
-                            <i data-lucide="trending-up" class="text-red-600"></i>
-                        </div>
-                        <div>
-                            <h3 class="text-white font-bold mb-2">Busca por Escala</h3>
-                            <p class="text-gray-400 text-sm">Para quem já tem um canal mas está estagnado e quer aprender a viralizar de verdade e lucrar em dólar.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 5. O QUE VOCÊ VAI RECEBER? -->
-    <section class="py-24 bg-black">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-5xl font-black text-white mb-4 uppercase italic">O QUE VOCÊ VAI <span class="text-red-600">RECEBER? 🎁</span></h2>
-                <p class="text-gray-400 max-w-2xl mx-auto">Tudo o que você precisa para construir um império de canais narrativos e dominar o YouTube.</p>
-            </div>
-
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Guia -->
-                <div class="bg-zinc-900 p-8 rounded-3xl border border-white/5 flex flex-col h-full">
-                    <div class="w-14 h-14 bg-red-600/10 rounded-2xl flex items-center justify-center mb-6">
-                        <i data-lucide="book-open" class="text-red-600 w-8 h-8"></i>
-                    </div>
-                    <h3 class="text-xl font-black text-white mb-4 uppercase">Guia Completo do Método 📖</h3>
-                    <ul class="space-y-3 text-sm text-gray-400">
-                        <li class="flex items-center gap-2"><i data-lucide="check" class="text-red-600 w-4 h-4"></i> Estratégias de roteirização</li>
-                        <li class="flex items-center gap-2"><i data-lucide="check" class="text-red-600 w-4 h-4"></i> Estruturação de perfil/canal completa</li>
-                        <li class="flex items-center gap-2 font-bold text-white"><i data-lucide="plus" class="text-red-600 w-4 h-4"></i> Como criar e editar esses vídeos</li>
-                        <li class="flex items-center gap-2 font-bold text-white"><i data-lucide="plus" class="text-red-600 w-4 h-4"></i> Todas as ferramentas necessárias</li>
-                    </ul>
-                </div>
-
-                <!-- Biblioteca -->
-                <div class="bg-zinc-900 p-8 rounded-3xl border border-white/5 flex flex-col h-full">
-                    <div class="w-14 h-14 bg-red-600/10 rounded-2xl flex items-center justify-center mb-6">
-                        <i data-lucide="mic-2" class="text-red-600 w-8 h-8"></i>
-                    </div>
-                    <h3 class="text-xl font-black text-white mb-4 uppercase">Biblioteca de Áudios 🎙️</h3>
-                    <ul class="space-y-3 text-sm text-gray-400">
-                        <li class="flex items-center gap-2"><i data-lucide="check" class="text-red-600 w-4 h-4"></i> +200 histórias prontas</li>
-                        <li class="flex items-center gap-2"><i data-lucide="check" class="text-red-600 w-4 h-4"></i> +1300 áudios narrados</li>
-                        <li class="flex items-center gap-2 font-bold text-white"><i data-lucide="refresh-cw" class="text-red-600 w-4 h-4"></i> Reposições mensais: novas histórias todos os meses</li>
-                    </ul>
-                </div>
-
-                <!-- Bônus Consolidado -->
-                <div class="bg-yellow-500/5 p-8 rounded-3xl border-2 border-yellow-500/30 flex flex-col h-full glow-yellow relative overflow-hidden">
-                    <div class="absolute top-0 right-0 bg-yellow-500 text-black text-[10px] font-black px-4 py-1 rounded-bl-lg uppercase">SUPER BÔNUS EXCLUSIVO</div>
-                    <div class="w-14 h-14 bg-yellow-500/20 rounded-2xl flex items-center justify-center mb-6">
-                        <i data-lucide="sparkles" class="text-yellow-500 w-8 h-8"></i>
-                    </div>
-                    <h3 class="text-xl font-black text-yellow-500 mb-4 uppercase">PACK BÔNUS EXPLOSIVO 🚀</h3>
-                    <ul class="space-y-4 text-sm text-gray-300">
-                        <li class="flex gap-3">
-                            <i data-lucide="trending-up" class="text-yellow-500 shrink-0 w-5 h-5"></i>
-                            <span><strong>Viralização Extrema:</strong> Estratégias validadas para dominar o algoritmo.</span>
-                        </li>
-                        <li class="flex gap-3">
-                            <i data-lucide="rotate-ccw" class="text-yellow-500 shrink-0 w-5 h-5"></i>
-                            <span><strong>Conteúdo Infinito:</strong> Guia para reutilização e reciclagem inteligente.</span>
-                        </li>
-                        <li class="flex gap-3">
-                            <i data-lucide="music" class="text-yellow-500 shrink-0 w-5 h-5"></i>
-                            <span><strong>Pack de Músicas:</strong> Trilhas premium sem copyright e seguras.</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 6. TESTIMONIALS -->
-    <section class="py-24 bg-zinc-950">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl md:text-5xl font-black text-white text-center mb-16 uppercase italic">RESULTADOS <span class="text-red-600">REAIS ⭐</span></h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="p-6 bg-zinc-900 border border-white/5 rounded-2xl">
-                    <div class="flex gap-1 mb-4 text-yellow-500"><i data-lucide="star" class="w-3 h-3 fill-current"></i><i data-lucide="star" class="w-3 h-3 fill-current"></i><i data-lucide="star" class="w-3 h-3 fill-current"></i><i data-lucide="star" class="w-3 h-3 fill-current"></i><i data-lucide="star" class="w-3 h-3 fill-current"></i></div>
-                    <p class="text-gray-300 text-sm italic mb-6">"Eu já tinha tentado 3 nichos diferentes e todos morreram em menos de 2 meses. Agora com esse método, meu canal não para de crescer🔥🔥"</p>
-                    <div class="text-white font-bold text-sm">— Lucas M.</div>
-                </div>
-                <div class="p-6 bg-zinc-900 border border-white/5 rounded-2xl">
-                    <div class="flex gap-1 mb-4 text-yellow-500"><i data-lucide="star" class="w-3 h-3 fill-current"></i><i data-lucide="star" class="w-3 h-3 fill-current"></i><i data-lucide="star" class="w-3 h-3 fill-current"></i><i data-lucide="star" class="w-3 h-3 fill-current"></i><i data-lucide="star" class="w-3 h-3 fill-current"></i></div>
-                    <p class="text-gray-300 text-sm italic mb-6">"A biblioteca economiza horas do meu dia. Agora consigo fazer 3 ou 4 vídeos por dia com muita qualidade"</p>
-                    <div class="text-white font-bold text-sm">— Ana C.</div>
-                </div>
-                <div class="p-6 bg-zinc-900 border border-white/5 rounded-2xl">
-                    <div class="flex gap-1 mb-4 text-yellow-500"><i data-lucide="star" class="w-3 h-3 fill-current"></i><i data-lucide="star" class="w-3 h-3 fill-current"></i><i data-lucide="star" class="w-3 h-3 fill-current"></i><i data-lucide="star" class="w-3 h-3 fill-current"></i><i data-lucide="star" class="w-3 h-3 fill-current"></i></div>
-                    <p class="text-gray-300 text-sm italic mb-6">"Comecei do zero e em 3 semanas já tinha vídeos passando de 10 mil views, um sonho sendo realizadooo🥹🥹🥹."</p>
-                    <div class="text-white font-bold text-sm">— Camila R.</div>
-                </div>
-                <div class="p-6 bg-zinc-900 border border-white/5 rounded-2xl">
-                    <div class="flex gap-1 mb-4 text-yellow-500"><i data-lucide="star" class="w-3 h-3 fill-current"></i><i data-lucide="star" class="w-3 h-3 fill-current"></i><i data-lucide="star" class="w-3 h-3 fill-current"></i><i data-lucide="star" class="w-3 h-3 fill-current"></i><i data-lucide="star" class="w-3 h-3 fill-current"></i></div>
-                    <p class="text-gray-300 text-sm italic mb-6">"Quando eu era criança sempre quis ser youtuber de minecraft, graças a esse método hoje sou youtuber de canal dark kkkk de certa forma realizei meu sonho🙆‍♂️"</p>
-                    <div class="text-white font-bold text-sm">— Rafael S.</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 7. PRICING SECTION -->
-    <section id="checkout" class="py-24 bg-black relative overflow-hidden">
-        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-red-600/10 blur-[150px] rounded-full -z-10"></div>
-        
-        <div class="container mx-auto px-4">
-            <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8 items-center">
-                <!-- Value Stack -->
-                <div class="bg-zinc-900 p-8 rounded-[40px] border border-white/5">
-                    <h3 class="text-2xl font-black text-white mb-8 uppercase italic">EMPILHAMENTO DE VALOR 💎</h3>
-                    <div class="space-y-6">
-                        <div class="flex justify-between items-center border-b border-white/5 pb-4">
-                            <span class="text-gray-400 text-sm">Guia completo do método</span>
-                            <span class="text-white font-bold">R$ 67,00</span>
-                        </div>
-                        <div class="flex justify-between items-center border-b border-white/5 pb-4">
-                            <span class="text-gray-400 text-sm">Biblioteca de Histórias/Áudios</span>
-                            <span class="text-white font-bold">R$ 29,90</span>
-                        </div>
-                        <div class="flex justify-between items-center border-b border-white/5 pb-4 text-green-500">
-                            <span class="text-sm">Bônus: Viralização Extrema</span>
-                            <span class="font-bold uppercase">GRÁTIS</span>
-                        </div>
-                        <div class="flex justify-between items-center border-b border-white/5 pb-4 text-green-500">
-                            <span class="text-sm">Bônus: Conteúdo Infinito</span>
-                            <span class="font-bold uppercase">GRÁTIS</span>
-                        </div>
-                        <div class="flex justify-between items-center border-b border-white/5 pb-4 text-green-500">
-                            <span class="text-sm">Bônus: Pack de Músicas</span>
-                            <span class="font-bold uppercase">GRÁTIS</span>
-                        </div>
-                        <div class="flex justify-between items-center pt-4">
-                            <span class="text-gray-300 font-bold uppercase tracking-tighter">VALOR TOTAL:</span>
-                            <span class="text-red-600 font-bold line-through">R$ 97,00</span>
-                        </div>
-                    </div>
-                    
-                    <div class="mt-12 p-6 bg-yellow-500/5 border border-yellow-500/20 rounded-2xl">
-                        <div class="flex items-center gap-3 text-yellow-500 font-bold mb-2 uppercase text-sm">
-                            <i data-lucide="alert-circle" class="w-5 h-5"></i>
-                            OFERTA POR TEMPO LIMITADO! ⏳
-                        </div>
-                        <p class="text-gray-300 text-sm mb-4">O produto está em preço de lançamento. Conforme mais pessoas entram, o preço sobe.</p>
-                        <ul class="space-y-2 text-xs font-bold text-gray-400 uppercase tracking-widest">
-                            <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="text-yellow-500 w-3 h-3"></i> Preço de lançamento</li>
-                            <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="text-yellow-500 w-3 h-3"></i> Atualizações grátis</li>
-                            <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="text-yellow-500 w-3 h-3"></i> Preço vai subir</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Final Offer Box -->
-                <div class="bg-zinc-950 border-2 border-red-600 rounded-[40px] p-8 md:p-12 text-center shadow-[0_0_80px_rgba(220,38,38,0.2)]">
-                    <h2 class="text-3xl font-black text-white mb-2 uppercase italic">OFERTA FINAL 🎯</h2>
-                    <h3 class="text-xl font-bold text-red-600 mb-8 uppercase">MÉTODO NARRATIVO VIRAL</h3>
-                    <div class="mb-10 text-gray-500 line-through text-xl uppercase">De R$ 67,90</div>
-                    <div class="text-6xl font-black text-white"><span class="text-2xl align-top mt-4 inline-block mr-2">R$</span>29,90</div>
-                    <div class="text-red-600 font-bold mt-2">ou 6x de R$ 5,61 no cartão 💳</div>
-                    <a href="SEU_LINK_DE_CHECKOUT_AQUI" class="block w-full mt-8 py-6 bg-red-600 text-white text-xl font-black rounded-2xl shadow-xl hover:bg-red-700 transition-all active:scale-95 uppercase italic tracking-tighter inline-block no-underline">QUERO MEU ACESSO AGORA! 🚀</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 8. FAQ SECTION -->
-    <section class="py-24 bg-zinc-950 border-t border-white/5">
-        <div class="container mx-auto px-4 max-w-3xl">
-            <h2 class="text-3xl md:text-5xl font-black text-white text-center mb-16 uppercase italic">PERGUNTAS <span class="text-red-600">FREQUENTES ❓</span></h2>
-            <div class="space-y-4">
-                <details class="group bg-zinc-900 rounded-2xl border border-white/5 overflow-hidden">
-                    <summary class="p-6 cursor-pointer flex justify-between items-center font-bold text-white">
-                        Preciso aparecer nos vídeos?
-                        <i data-lucide="chevron-down" class="group-open:rotate-180 transition-transform"></i>
-                    </summary>
-                    <div class="p-6 pt-0 text-gray-400 text-sm">Não! O método é focado 100% em canais Dark, onde você cria conteúdo viral sem precisar mostrar o rosto ou usar sua própria voz.</div>
-                </details>
-                <details class="group bg-zinc-900 rounded-2xl border border-white/5 overflow-hidden">
-                    <summary class="p-6 cursor-pointer flex justify-between items-center font-bold text-white">
-                        Funciona para quem é iniciante?
-                        <i data-lucide="chevron-down" class="group-open:rotate-180 transition-transform"></i>
-                    </summary>
-                    <div class="p-6 pt-0 text-gray-400 text-sm">Sim! O método foi desenhado para quem está começando do zero absoluto, com um passo a passo simples e ferramentas fáceis de usar.</div>
-                </details>
-                <details class="group bg-zinc-900 rounded-2xl border border-white/5 overflow-hidden">
-                    <summary class="p-6 cursor-pointer flex justify-between items-center font-bold text-white">
-                        Como recebo o acesso ao material?
-                        <i data-lucide="chevron-down" class="group-open:rotate-180 transition-transform"></i>
-                    </summary>
-                    <div class="p-6 pt-0 text-gray-400 text-sm">Imediatamente após a confirmação do pagamento, você receberá um e-mail com todos os dados de acesso à nossa área de membros exclusiva.</div>
-                </details>
-                <details class="group bg-zinc-900 rounded-2xl border border-white/5 overflow-hidden">
-                    <summary class="p-6 cursor-pointer flex justify-between items-center font-bold text-white">
-                        Preciso de um computador potente?
-                        <i data-lucide="chevron-down" class="group-open:rotate-180 transition-transform"></i>
-                    </summary>
-                    <div class="p-6 pt-0 text-gray-400 text-sm">Não. Você pode aplicar o método e criar seus vídeos usando apenas um celular ou um computador básico com acesso à internet.</div>
-                </details>
-                <details class="group bg-zinc-900 rounded-2xl border border-white/5 overflow-hidden">
-                    <summary class="p-6 cursor-pointer flex justify-between items-center font-bold text-white">
-                        O pagamento é seguro?
-                        <i data-lucide="chevron-down" class="group-open:rotate-180 transition-transform"></i>
-                    </summary>
-                    <div class="p-6 pt-0 text-gray-400 text-sm">Sim. Utilizamos as plataformas de pagamento mais seguras do Brasil, com criptografia de ponta para proteger seus dados.</div>
-                </details>
-            </div>
-        </div>
-    </section>
-
-    <!-- 9. FOOTER -->
-    <footer class="py-12 border-t border-white/5 bg-black">
-        <div class="container mx-auto px-4 text-center">
-            <div class="flex flex-col items-center mb-4 md:mb-12">
-                <div class="flex flex-col items-center leading-none">
-                    <span class="text-[9px] md:text-sm font-bold text-white tracking-[0.2em] uppercase mb-1">MÉTODO</span>
-                    <span class="text-base md:text-2xl font-black text-red-600 tracking-tighter uppercase italic">NARRATIVO VIRAL</span>
-                </div>
-            </div>
-            <div class="text-gray-600 text-[10px] max-w-2xl mx-auto mb-8 leading-relaxed space-y-4">
-                <p>A venda do Método Narrativo Viral é realizada exclusivamente por este site oficial. Evite conteúdos falsificados ou pirateados. Apenas o conteúdo original garante acesso ao método completo.</p>
-                <p>Este site não possui vínculo com o Facebook ou qualquer uma de suas empresas. Após sair do Facebook, toda responsabilidade é do nosso site.</p>
-            </div>
-            <div class="mt-8 text-gray-700 text-[10px]">© 2026 Método Narrativo Viral. Todos os direitos reservados. 🔒</div>
-        </div>
-    </footer>
-
-    <!-- MOBILE FLOATING CTA -->
-    <div class="fixed bottom-6 left-6 right-6 z-40 md:hidden">
-        <a href="#checkout" class="flex items-center justify-center w-full py-4 bg-red-600 text-white font-black rounded-xl shadow-2xl uppercase text-sm italic tracking-tighter animate-bounce inline-block text-center no-underline">GARANTIR ACESSO - R$ 29,90 🚀</a>
+  <section class="relative grain overflow-hidden border-b border-white/5">
+    <div class="absolute inset-0 pointer-events-none">
+      <div class="absolute -top-24 left-[-8%] w-[34rem] h-[34rem] rounded-full bg-[#ee8f8f]/10 blur-3xl"></div>
+      <div class="absolute top-12 right-[-10%] w-[32rem] h-[32rem] rounded-full bg-[#f41919]/12 blur-3xl"></div>
+      <div class="absolute inset-0 opacity-[.045]" style="background-image: linear-gradient(rgba(255,255,255,.8) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.8) 1px, transparent 1px); background-size: 32px 32px;"></div>
     </div>
 
-    <!-- Lucide Icons Script -->
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <script>lucide.createIcons();</script>
+    <div class="relative max-w-7xl mx-auto px-5 md:px-8 pt-6 md:pt-8 pb-14 md:pb-20">
+      <header class="flex items-center justify-between gap-4 mb-8 md:mb-14">
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 rounded-2xl grid place-items-center bg-white/5 border border-white/10 shadow-lg">
+            <span class="text-sm font-black tracking-tight">MNV</span>
+          </div>
+          <div>
+            <div class="text-[11px] uppercase tracking-[0.34em] text-[#e4b7b7] font-bold">Método</div>
+            <div class="text-xl md:text-2xl font-black tracking-tight text-white">Narrativo <span class="accent">Viral</span></div>
+          </div>
+        </div>
+
+        <a href="#checkout" class="hidden md:inline-flex items-center justify-center px-5 py-3 rounded-full glass font-semibold text-sm hover:border-red-500/30 transition">Entrar agora</a>
+      </header>
+
+      <div class="grid lg:grid-cols-[1.02fr_.98fr] gap-10 items-center">
+        <div>
+          <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full glass text-[11px] md:text-xs uppercase tracking-[0.2em] font-bold text-[#f0b7b7]">
+            <span class="pulse-dot"></span>
+            Estrutura para canal dark sem depender de tendências
+          </div>
+
+          <h1 class="headline mt-6 text-[2.4rem] sm:text-6xl md:text-[5.3rem] font-black max-w-5xl">
+            O método que está <span class="accent">mudando o jogo</span> dos canais dark.
+            <span class="block mt-2">Transforme histórias narradas em conteúdo viral</span>
+            <span class="block accent-soft mt-2">sem aparecer.</span>
+          </h1>
+
+          <p class="mt-6 max-w-2xl text-base md:text-xl text-[#e4b7b7] leading-relaxed">
+            Descubra o passo a passo para transformar histórias em vídeos com alto poder de retenção, construir uma audiência sólida e criar um canal que não vive refém de hype passageiro.
+          </p>
+
+          <div class="mt-8 grid sm:grid-cols-3 gap-4 max-w-3xl">
+            <div class="glass rounded-3xl p-5 card-hover">
+              <div class="text-[11px] uppercase tracking-[0.22em] text-[#ee8f8f] font-bold">Formato</div>
+              <div class="mt-2 text-lg font-black">100% dark</div>
+              <p class="mt-2 text-sm text-[#e4b7b7]">Sem mostrar o rosto e sem depender da sua voz.</p>
+            </div>
+            <div class="glass rounded-3xl p-5 card-hover">
+              <div class="text-[11px] uppercase tracking-[0.22em] text-[#ee8f8f] font-bold">Estrutura</div>
+              <div class="mt-2 text-lg font-black">Alta retenção</div>
+              <p class="mt-2 text-sm text-[#e4b7b7]">Narrativa, curiosidade e payoff organizados para prender.</p>
+            </div>
+            <div class="glass rounded-3xl p-5 card-hover">
+              <div class="text-[11px] uppercase tracking-[0.22em] text-[#ee8f8f] font-bold">Objetivo</div>
+              <div class="mt-2 text-lg font-black">Canal sólido</div>
+              <p class="mt-2 text-sm text-[#e4b7b7]">Mais consistência e menos recomeços do zero.</p>
+            </div>
+          </div>
+
+          <div class="mt-8 flex flex-col sm:flex-row gap-4 items-start sm:items-center">
+            <a href="#checkout" class="btn-glow inline-flex items-center justify-center rounded-2xl px-8 py-5 text-white font-black uppercase tracking-tight text-base md:text-lg">
+              Quero acesso imediato
+            </a>
+            <div class="text-sm text-[#e4b7b7]">Acesso liberado após confirmação · Atualizações inclusas</div>
+          </div>
+        </div>
+
+        <div class="relative">
+          <div class="video-wrap">
+            <div class="video-label px-4 py-3 rounded-2xl">
+              <div class="text-[10px] uppercase tracking-[0.22em] text-[#ee8f8f] font-bold">Apresentação oficial</div>
+              <div class="mt-1 text-sm font-semibold text-white">Assista antes de entrar</div>
+            </div>
+            <div class="aspect-video rounded-[24px] overflow-hidden bg-black border border-white/10">
+              <iframe src="https://fast.wistia.net/embed/iframe/o27s1fh4rn" title="Vídeo de apresentação" allow="autoplay; fullscreen" frameborder="0" scrolling="no" class="w-full h-full" allowfullscreen></iframe>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-3 gap-3 mt-4">
+            <div class="glass rounded-2xl p-4 text-center">
+              <div class="text-2xl font-black">+200</div>
+              <div class="mt-1 text-[11px] uppercase tracking-[0.18em] text-[#e4b7b7]">Histórias prontas</div>
+            </div>
+            <div class="glass rounded-2xl p-4 text-center">
+              <div class="text-2xl font-black">+1300</div>
+              <div class="mt-1 text-[11px] uppercase tracking-[0.18em] text-[#e4b7b7]">Áudios narrados</div>
+            </div>
+            <div class="glass rounded-2xl p-4 text-center">
+              <div class="text-2xl font-black">7 dias</div>
+              <div class="mt-1 text-[11px] uppercase tracking-[0.18em] text-[#e4b7b7]">Garantia</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="ticker">
+    <div class="ticker-track">
+      <span>canais dark</span><span>retenção</span><span>histórias narradas</span><span>sem aparecer</span><span>produção escalável</span><span>conteúdo viral</span><span>canal sólido</span><span>canais dark</span><span>retenção</span><span>histórias narradas</span><span>sem aparecer</span><span>produção escalável</span><span>conteúdo viral</span><span>canal sólido</span>
+    </div>
+  </div>
+
+  <section class="max-w-7xl mx-auto px-5 md:px-8 py-14 md:py-20">
+    <div class="section-shell grain rounded-[34px] p-7 md:p-10">
+      <div class="grid lg:grid-cols-[.92fr_1.08fr] gap-10 items-start">
+        <div>
+          <div class="text-[11px] uppercase tracking-[0.24em] text-[#ee8f8f] font-bold">A verdade incômoda</div>
+          <h2 class="mt-4 text-3xl md:text-5xl font-black tracking-[-0.05em] leading-[1.02]">Por que a maioria fracassa com <span class="accent">canais dark</span>?</h2>
+          <p class="mt-5 text-lg text-[#e4b7b7] leading-relaxed">Porque constrói em cima de tendência, cópia saturada e improviso. Quando o hype morre, o canal vai junto.</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-4">
+          <div class="glass rounded-3xl p-6 card-hover">
+            <div class="text-sm font-black text-white">Nichos do momento morrem rápido</div>
+            <p class="mt-3 text-sm text-[#e4b7b7] leading-relaxed">Você até pode ganhar tração por um curto período, mas não constrói base estável.</p>
+          </div>
+          <div class="glass rounded-3xl p-6 card-hover">
+            <div class="text-sm font-black text-white">Cópia sem estrutura não sustenta</div>
+            <p class="mt-3 text-sm text-[#e4b7b7] leading-relaxed">Copiar formato da gringa já não resolve sem entender narrativa e retenção.</p>
+          </div>
+          <div class="glass rounded-3xl p-6 card-hover">
+            <div class="text-sm font-black text-white">Muito esforço, pouca consistência</div>
+            <p class="mt-3 text-sm text-[#e4b7b7] leading-relaxed">A pessoa publica, para, recomeça e nunca cria previsibilidade operacional.</p>
+          </div>
+          <div class="glass rounded-3xl p-6 card-hover">
+            <div class="text-sm font-black text-white">O problema não é vontade</div>
+            <p class="mt-3 text-sm text-[#e4b7b7] leading-relaxed">É falta de um método real para escolher histórias, estruturar vídeos e escalar.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="max-w-7xl mx-auto px-5 md:px-8 py-2 md:py-4">
+    <div class="section-shell rounded-[34px] p-7 md:p-10">
+      <div class="text-center max-w-3xl mx-auto">
+        <div class="text-[11px] uppercase tracking-[0.24em] text-[#ee8f8f] font-bold">O mecanismo</div>
+        <h2 class="mt-4 text-3xl md:text-5xl font-black tracking-[-0.05em] leading-[1.02]">Por que o Método Narrativo Viral é <span class="accent">diferente</span></h2>
+        <p class="mt-5 text-lg text-[#e4b7b7] leading-relaxed">Você não aprende só a fazer vídeo. Aprende a organizar um formato que segura atenção do início ao fim.</p>
+      </div>
+
+      <div class="mt-12 grid md:grid-cols-3 gap-5">
+        <div class="glass rounded-[30px] p-7 card-hover">
+          <div class="text-[11px] uppercase tracking-[0.2em] text-[#ee8f8f] font-bold">Pilar 01</div>
+          <h3 class="mt-3 text-2xl font-black tracking-tight">Escolha de histórias</h3>
+          <p class="mt-4 text-[#e4b7b7] leading-relaxed">Como identificar histórias com apelo narrativo, curiosidade natural e alto potencial de retenção.</p>
+        </div>
+        <div class="glass rounded-[30px] p-7 card-hover">
+          <div class="text-[11px] uppercase tracking-[0.2em] text-[#ee8f8f] font-bold">Pilar 02</div>
+          <h3 class="mt-3 text-2xl font-black tracking-tight">Estrutura que prende</h3>
+          <p class="mt-4 text-[#e4b7b7] leading-relaxed">Abertura, desenvolvimento e payoff organizados para manter a pessoa assistindo até o final.</p>
+        </div>
+        <div class="glass rounded-[30px] p-7 card-hover">
+          <div class="text-[11px] uppercase tracking-[0.2em] text-[#ee8f8f] font-bold">Pilar 03</div>
+          <h3 class="mt-3 text-2xl font-black tracking-tight">Produção escalável</h3>
+          <p class="mt-4 text-[#e4b7b7] leading-relaxed">Processo, ferramentas e material pronto para publicar com velocidade sem perder qualidade.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="max-w-7xl mx-auto px-5 md:px-8 py-14 md:py-20">
+    <div class="section-shell grain rounded-[34px] p-7 md:p-10">
+      <div class="grid lg:grid-cols-[1.04fr_.96fr] gap-10 items-start">
+        <div>
+          <div class="text-[11px] uppercase tracking-[0.24em] text-[#ee8f8f] font-bold">O que você recebe</div>
+          <h2 class="mt-4 text-3xl md:text-5xl font-black tracking-[-0.05em] leading-[1.02]">Uma oferta com cara de produto <span class="accent">real</span>, não de promessa vazia.</h2>
+          <p class="mt-5 text-lg text-[#e4b7b7] leading-relaxed">Tudo o que você precisa para sair da teoria e começar a estruturar seu canal narrativo com mais clareza e menos improviso.</p>
+        </div>
+
+        <div class="glass rounded-[30px] p-7 md:p-8">
+          <div class="space-y-5">
+            <div class="flex gap-4">
+              <div class="w-11 h-11 shrink-0 rounded-2xl bg-[#f41919]/16 border border-[#ff2d2d]/20 grid place-items-center font-black">01</div>
+              <div>
+                <div class="font-bold text-white">Método completo passo a passo</div>
+                <div class="mt-1 text-sm text-[#e4b7b7]">Estratégia, estrutura do canal, roteiro, produção e lógica de crescimento.</div>
+              </div>
+            </div>
+            <div class="h-px bg-white/8"></div>
+            <div class="flex gap-4">
+              <div class="w-11 h-11 shrink-0 rounded-2xl bg-[#f41919]/16 border border-[#ff2d2d]/20 grid place-items-center font-black">02</div>
+              <div>
+                <div class="font-bold text-white">Biblioteca de histórias e áudios</div>
+                <div class="mt-1 text-sm text-[#e4b7b7]">Material pronto para acelerar produção e reduzir o tempo de operação.</div>
+              </div>
+            </div>
+            <div class="h-px bg-white/8"></div>
+            <div class="flex gap-4">
+              <div class="w-11 h-11 shrink-0 rounded-2xl bg-[#f41919]/16 border border-[#ff2d2d]/20 grid place-items-center font-black">03</div>
+              <div>
+                <div class="font-bold text-white">Ferramentas e organização</div>
+                <div class="mt-1 text-sm text-[#e4b7b7]">Para você não ficar perdido tentando montar tudo sozinho do zero.</div>
+              </div>
+            </div>
+            <div class="h-px bg-white/8"></div>
+            <div class="flex gap-4">
+              <div class="w-11 h-11 shrink-0 rounded-2xl bg-[#f41919]/16 border border-[#ff2d2d]/20 grid place-items-center font-black">04</div>
+              <div>
+                <div class="font-bold text-white">Atualizações contínuas</div>
+                <div class="mt-1 text-sm text-[#e4b7b7]">Expansão da biblioteca e melhoria contínua do material.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-10 grid md:grid-cols-3 gap-5">
+        <div class="glass rounded-3xl p-6 card-hover">
+          <div class="text-lg font-black">Para iniciantes</div>
+          <p class="mt-3 text-sm text-[#e4b7b7]">Mesmo para quem ainda não construiu nenhum canal.</p>
+        </div>
+        <div class="glass rounded-3xl p-6 card-hover">
+          <div class="text-lg font-black">Sem mostrar o rosto</div>
+          <p class="mt-3 text-sm text-[#e4b7b7]">Modelo pensado para operação dark, discreta e escalável.</p>
+        </div>
+        <div class="glass rounded-3xl p-6 card-hover">
+          <div class="text-lg font-black">Mais velocidade</div>
+          <p class="mt-3 text-sm text-[#e4b7b7]">Menos improviso, mais execução guiada com material pronto.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="max-w-7xl mx-auto px-5 md:px-8 py-2 md:py-4">
+    <div class="section-shell rounded-[34px] p-7 md:p-10">
+      <div class="text-center max-w-3xl mx-auto">
+        <div class="text-[11px] uppercase tracking-[0.24em] text-[#ee8f8f] font-bold">Resultados e provas</div>
+        <h2 class="mt-4 text-3xl md:text-5xl font-black tracking-[-0.05em] leading-[1.02]">Substitua estes blocos por <span class="accent">prints reais</span> e o visual já ganha outra força.</h2>
+        <p class="mt-5 text-lg text-[#e4b7b7] leading-relaxed">A lógica visual aqui está pronta para depoimentos, provas de resultado e preview da área de membros, no mesmo clima do site de referência.</p>
+      </div>
+
+      <div class="mt-12 grid lg:grid-cols-3 gap-5">
+        <div class="glass rounded-[30px] p-4 card-hover">
+          <div class="rounded-[22px] aspect-[4/5] bg-white/5 border border-white/8 grid place-items-center text-center p-5">
+            <div>
+              <div class="text-[11px] uppercase tracking-[0.2em] text-[#ee8f8f] font-bold">Prova 01</div>
+              <div class="mt-3 text-xl font-black">Print de feedback</div>
+              <p class="mt-3 text-sm text-[#e4b7b7]">Coloque aqui print real de aluno elogiando clareza do método, biblioteca ou estrutura de execução.</p>
+            </div>
+          </div>
+        </div>
+        <div class="glass rounded-[30px] p-4 card-hover">
+          <div class="rounded-[22px] aspect-[4/5] bg-white/5 border border-white/8 grid place-items-center text-center p-5">
+            <div>
+              <div class="text-[11px] uppercase tracking-[0.2em] text-[#ee8f8f] font-bold">Prova 02</div>
+              <div class="mt-3 text-xl font-black">Print de resultado</div>
+              <p class="mt-3 text-sm text-[#e4b7b7]">Use print com views, crescimento do canal, retenção ou qualquer métrica concreta.</p>
+            </div>
+          </div>
+        </div>
+        <div class="glass rounded-[30px] p-4 card-hover">
+          <div class="rounded-[22px] aspect-[4/5] bg-white/5 border border-white/8 grid place-items-center text-center p-5">
+            <div>
+              <div class="text-[11px] uppercase tracking-[0.2em] text-[#ee8f8f] font-bold">Prova 03</div>
+              <div class="mt-3 text-xl font-black">Preview do produto</div>
+              <p class="mt-3 text-sm text-[#e4b7b7]">Pode ser um mockup da área de membros ou parte da biblioteca de áudios e histórias.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="checkout" class="max-w-7xl mx-auto px-5 md:px-8 py-14 md:py-20">
+    <div class="section-shell grain rounded-[34px] p-7 md:p-10">
+      <div class="grid lg:grid-cols-[.95fr_1.05fr] gap-8 items-stretch">
+        <div class="glass rounded-[30px] p-7 md:p-8">
+          <div class="text-[11px] uppercase tracking-[0.24em] text-[#ee8f8f] font-bold">Empilhamento de valor</div>
+          <h2 class="mt-4 text-3xl md:text-4xl font-black tracking-tight">Tudo o que você leva ao entrar hoje</h2>
+
+          <div class="mt-8 space-y-4">
+            <div class="flex items-center justify-between border-b border-white/8 pb-4 text-sm">
+              <span class="text-[#e4b7b7]">Método Narrativo Viral completo</span>
+              <span class="font-bold text-white">R$ 67,00</span>
+            </div>
+            <div class="flex items-center justify-between border-b border-white/8 pb-4 text-sm">
+              <span class="text-[#e4b7b7]">Biblioteca com histórias e áudios</span>
+              <span class="font-bold text-white">R$ 29,90</span>
+            </div>
+            <div class="flex items-center justify-between border-b border-white/8 pb-4 text-sm">
+              <span class="text-[#e4b7b7]">Materiais complementares</span>
+              <span class="font-bold text-white">Inclusos</span>
+            </div>
+            <div class="flex items-center justify-between border-b border-white/8 pb-4 text-sm">
+              <span class="text-[#e4b7b7]">Atualizações futuras</span>
+              <span class="font-bold text-white">Inclusas</span>
+            </div>
+          </div>
+
+          <div class="mt-8 rounded-[24px] border border-[#ff2d2d]/18 bg-[#f41919]/8 p-6">
+            <div class="text-[11px] uppercase tracking-[0.2em] text-[#ee8f8f] font-bold">Garantia</div>
+            <div class="mt-2 text-2xl font-black">7 dias para testar</div>
+            <p class="mt-3 text-sm text-[#e4b7b7] leading-relaxed">Se dentro do prazo legal você entender que o material não faz sentido para você, pode pedir reembolso dentro da garantia.</p>
+          </div>
+        </div>
+
+        <div class="rounded-[32px] p-[1px] bg-gradient-to-b from-[#fa6464] via-[#f41919] to-[#4e0000] shadow-[0_30px_120px_rgba(244,25,25,.22)]">
+          <div class="h-full rounded-[31px] bg-[linear-gradient(180deg,#130202,#270202)] p-8 md:p-10 flex flex-col justify-between border border-white/6">
+            <div>
+              <div class="inline-flex px-3 py-2 rounded-full bg-white/6 border border-white/8 text-[11px] font-bold uppercase tracking-[0.2em] text-[#ebbbbb]">Preço atual de entrada</div>
+              <h3 class="mt-5 text-3xl md:text-5xl font-black tracking-tight">Entre agora por</h3>
+              <div class="mt-6 text-[#ee8f8f] line-through text-xl">de R$ 67,90</div>
+              <div class="mt-2 text-6xl md:text-7xl font-black tracking-tight">R$ 29,90</div>
+              <div class="mt-3 text-[#ebbbbb] font-semibold">ou 6x de R$ 5,61</div>
+
+              <div class="mt-8 grid sm:grid-cols-2 gap-3">
+                <div class="rounded-2xl bg-white/5 border border-white/8 p-4 text-sm text-[#e4b7b7]">Acesso após aprovação</div>
+                <div class="rounded-2xl bg-white/5 border border-white/8 p-4 text-sm text-[#e4b7b7]">Método + biblioteca + updates</div>
+              </div>
+            </div>
+
+            <div class="mt-10">
+              <a href="SEU_LINK_DE_CHECKOUT_AQUI" class="btn-glow block w-full text-center rounded-2xl px-8 py-5 text-white font-black uppercase tracking-tight text-lg">Quero meu acesso agora</a>
+              <p class="mt-4 text-center text-xs text-[#e4b7b7]">Troque pelo seu checkout real antes de publicar.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="max-w-4xl mx-auto px-5 md:px-8 py-2 md:py-4 pb-16 md:pb-24">
+    <div class="section-shell rounded-[34px] p-7 md:p-10">
+      <div class="text-center max-w-3xl mx-auto">
+        <div class="text-[11px] uppercase tracking-[0.24em] text-[#ee8f8f] font-bold">Perguntas frequentes</div>
+        <h2 class="mt-4 text-3xl md:text-5xl font-black tracking-[-0.05em]">Sem fricção desnecessária na decisão</h2>
+      </div>
+
+      <div class="mt-12 space-y-4">
+        <details class="faq-item glass rounded-[24px] p-6">
+          <summary class="cursor-pointer flex items-center justify-between gap-5 font-bold text-[#ebbbbb]">
+            Preciso aparecer nos vídeos?
+            <span class="faq-icon shrink-0 w-10 h-10 rounded-full border border-white/10 grid place-items-center text-lg">+</span>
+          </summary>
+          <p class="mt-4 text-sm leading-relaxed text-[#e4b7b7]">Não. O método foi pensado para quem quer operar canais dark sem mostrar o rosto.</p>
+        </details>
+        <details class="faq-item glass rounded-[24px] p-6">
+          <summary class="cursor-pointer flex items-center justify-between gap-5 font-bold text-[#ebbbbb]">
+            Serve para iniciante?
+            <span class="faq-icon shrink-0 w-10 h-10 rounded-full border border-white/10 grid place-items-center text-lg">+</span>
+          </summary>
+          <p class="mt-4 text-sm leading-relaxed text-[#e4b7b7]">Sim, desde que a pessoa aplique o processo e use o método na prática.</p>
+        </details>
+        <details class="faq-item glass rounded-[24px] p-6">
+          <summary class="cursor-pointer flex items-center justify-between gap-5 font-bold text-[#ebbbbb]">
+            Como recebo o acesso?
+            <span class="faq-icon shrink-0 w-10 h-10 rounded-full border border-white/10 grid place-items-center text-lg">+</span>
+          </summary>
+          <p class="mt-4 text-sm leading-relaxed text-[#e4b7b7]">Depois da confirmação do pagamento, o acesso é liberado conforme sua operação de checkout e membros.</p>
+        </details>
+        <details class="faq-item glass rounded-[24px] p-6">
+          <summary class="cursor-pointer flex items-center justify-between gap-5 font-bold text-[#ebbbbb]">
+            Preciso de computador potente?
+            <span class="faq-icon shrink-0 w-10 h-10 rounded-full border border-white/10 grid place-items-center text-lg">+</span>
+          </summary>
+          <p class="mt-4 text-sm leading-relaxed text-[#e4b7b7]">Não necessariamente. A proposta é trabalhar com uma operação simples e enxuta.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <footer class="border-t border-white/5 pb-24 md:pb-12 pt-8">
+    <div class="max-w-7xl mx-auto px-5 md:px-8 flex flex-col md:flex-row gap-6 md:items-end md:justify-between">
+      <div>
+        <div class="text-[11px] uppercase tracking-[0.34em] text-[#e4b7b7] font-bold">Método</div>
+        <div class="text-2xl md:text-3xl font-black tracking-tight">Narrativo <span class="accent">Viral</span></div>
+      </div>
+      <div class="max-w-xl text-xs leading-relaxed text-[#e4b7b7]">
+        Antes de publicar, inserir checkout real, política de privacidade, termos, provas reais e quaisquer elementos legais que sua operação exigir.
+      </div>
+    </div>
+  </footer>
+
+  <div class="fixed bottom-4 left-4 right-4 md:hidden z-50">
+    <a href="#checkout" class="mobile-cta btn-glow block text-center rounded-2xl px-6 py-4 text-white font-black uppercase tracking-tight">Quero acessar · R$ 29,90</a>
+  </div>
+
+  <script>
+    const notifications = [
+      ['Lucas, São Paulo', 'acabou de garantir acesso ao Método Narrativo Viral'],
+      ['Ana, Curitiba', 'entrou na área de membros agora mesmo'],
+      ['Rafael, Belo Horizonte', 'comprou o método há poucos minutos'],
+      ['Camila, Recife', 'garantiu acesso à biblioteca de histórias'],
+      ['João, Porto Alegre', 'acabou de finalizar a compra'],
+      ['Mariana, Goiânia', 'acabou de entrar no treinamento'],
+      ['Felipe, Salvador', 'comprou o acesso completo agora'],
+    ];
+
+    const stack = document.getElementById('purchaseStack');
+    let notifIndex = 0;
+
+    function spawnToast() {
+      const [name, text] = notifications[notifIndex % notifications.length];
+      notifIndex++;
+
+      const item = document.createElement('div');
+      item.className = 'purchase-toast';
+      item.innerHTML = `
+        <div class="flex items-start gap-3">
+          <div class="mt-1 w-10 h-10 rounded-full bg-white/5 border border-white/10 grid place-items-center text-sm font-black">✓</div>
+          <div class="flex-1 min-w-0">
+            <div class="text-[11px] uppercase tracking-[0.18em] text-[#ee8f8f] font-bold">Nova compra</div>
+            <div class="mt-1 text-sm font-semibold text-white">${name}</div>
+            <div class="mt-1 text-sm text-[#e4b7b7] leading-relaxed">${text}</div>
+          </div>
+        </div>
+      `;
+      stack.appendChild(item);
+      setTimeout(() => item.remove(), 5600);
+    }
+
+    setTimeout(spawnToast, 2000);
+    setInterval(spawnToast, 6800);
+  </script>
 </body>
 </html>
