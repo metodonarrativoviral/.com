@@ -1,0 +1,1265 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Método Narrativo Viral - Transforme Histórias em Conteúdo Viral</title>
+<meta name="description" content="Descubra o método passo a passo para transformar histórias narradas em conteúdo viral. Por apenas R$29,90." />
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+
+:root {
+  --bg: #0a0a0a;
+  --fg: #ebebeb;
+  --card: #121212;
+  --primary: hsl(0, 85%, 50%);
+  --primary-fg: #fff;
+  --secondary: #1a1a1a;
+  --muted: #1f1f1f;
+  --muted-fg: #737373;
+  --accent: hsl(51, 100%, 50%);
+  --accent-fg: #0a0a0a;
+  --border: #262626;
+  --radius: 0.75rem;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: var(--bg); color: var(--fg); font-family: 'Inter', sans-serif; line-height: 1.6; }
+h1, h2, h3, h4, h5, h6 { font-family: 'Bebas Neue', sans-serif; }
+a { text-decoration: none; color: inherit; }
+img { max-width: 100%; }
+
+/* Utilities */
+.container { max-width: 768px; margin: 0 auto; padding: 0 16px; }
+.container-sm { max-width: 512px; margin: 0 auto; padding: 0 16px; }
+.container-md { max-width: 640px; margin: 0 auto; padding: 0 16px; }
+.text-center { text-align: center; }
+.text-primary { color: var(--primary); }
+.text-accent { color: var(--accent); }
+.text-muted { color: var(--muted-fg); }
+.text-soft { color: rgba(235,235,235,0.7); }
+.text-softer { color: rgba(235,235,235,0.6); }
+.font-bold { font-weight: 700; }
+.font-semibold { font-weight: 600; }
+.uppercase { text-transform: uppercase; }
+.tracking-wide { letter-spacing: 0.05em; }
+.tracking-wider { letter-spacing: 0.1em; }
+.tracking-widest { letter-spacing: 0.3em; }
+.line-through { text-decoration: line-through; }
+.italic { font-style: italic; }
+.inline-flex { display: inline-flex; align-items: center; }
+.flex { display: flex; }
+.flex-col { flex-direction: column; }
+.items-center { align-items: center; }
+.items-start { align-items: flex-start; }
+.justify-center { justify-content: center; }
+.justify-between { justify-content: space-between; }
+.gap-1 { gap: 4px; }
+.gap-2 { gap: 8px; }
+.gap-3 { gap: 12px; }
+.gap-4 { gap: 16px; }
+.gap-5 { gap: 20px; }
+.shrink-0 { flex-shrink: 0; }
+.flex-1 { flex: 1; }
+.w-full { width: 100%; }
+.mx-auto { margin-left: auto; margin-right: auto; }
+.mb-1 { margin-bottom: 4px; }
+.mb-2 { margin-bottom: 8px; }
+.mb-3 { margin-bottom: 12px; }
+.mb-4 { margin-bottom: 16px; }
+.mb-6 { margin-bottom: 24px; }
+.mb-8 { margin-bottom: 32px; }
+.mb-10 { margin-bottom: 40px; }
+.mb-14 { margin-bottom: 56px; }
+.mt-1 { margin-top: 4px; }
+.mt-2 { margin-top: 8px; }
+.mt-4 { margin-top: 16px; }
+.mt-6 { margin-top: 24px; }
+.py-5 { padding-top: 20px; padding-bottom: 20px; }
+.py-6 { padding-top: 24px; padding-bottom: 24px; }
+.py-8 { padding-top: 32px; padding-bottom: 32px; }
+.py-20 { padding-top: 80px; padding-bottom: 80px; }
+.py-24 { padding-top: 96px; padding-bottom: 96px; }
+.py-28 { padding-top: 112px; padding-bottom: 112px; }
+.px-4 { padding-left: 16px; padding-right: 16px; }
+.p-5 { padding: 20px; }
+.p-6 { padding: 24px; }
+.p-8 { padding: 32px; }
+.space-y-3 > * + * { margin-top: 12px; }
+.space-y-4 > * + * { margin-top: 16px; }
+.space-y-6 > * + * { margin-top: 24px; }
+
+/* Grid */
+.grid { display: grid; gap: 16px; }
+.grid-1 { grid-template-columns: 1fr; }
+@media (min-width: 640px) {
+  .sm-grid-2 { grid-template-columns: 1fr 1fr; }
+  .sm-grid-3 { grid-template-columns: 1fr 1fr 1fr; }
+}
+
+/* Red divider */
+.red-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(200,30,30,0.5), transparent);
+}
+.red-divider-section { max-width: 200px; margin: 0 auto; }
+
+/* Animations */
+@keyframes cta-pulse {
+  0%, 100% { box-shadow: 0 0 15px 4px rgba(200,30,30,0.3); }
+  50% { box-shadow: 0 0 30px 10px rgba(200,30,30,0.5); }
+}
+@keyframes vsl-pulse {
+  0%, 100% { box-shadow: 0 0 10px 3px rgba(200,30,30,0.25); }
+  50% { box-shadow: 0 0 25px 10px rgba(200,30,30,0.55); }
+}
+@keyframes gold-pulse {
+  0%, 100% { box-shadow: 0 0 20px 4px rgba(255,215,0,0.1); }
+  50% { box-shadow: 0 0 35px 8px rgba(255,215,0,0.2); }
+}
+.cta-glow { animation: cta-pulse 2.5s ease-in-out infinite; }
+.vsl-glow { animation: vsl-pulse 3s ease-in-out infinite; border: 1px solid rgba(200,30,30,0.5); border-radius: var(--radius); }
+.offer-glow { animation: gold-pulse 3s ease-in-out infinite; border: 2px solid rgba(255,215,0,0.3); }
+
+/* Buttons */
+.btn-primary {
+  display: inline-block;
+  padding: 20px 48px;
+  background: var(--primary);
+  color: var(--primary-fg);
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 0.05em;
+  border-radius: var(--radius);
+  border: none;
+  cursor: pointer;
+  transition: filter 0.2s;
+  text-align: center;
+}
+.btn-primary:hover { filter: brightness(1.1); }
+
+/* Cards */
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+  transition: border-color 0.3s;
+}
+.card:hover { border-color: rgba(200,30,30,0.3); }
+
+/* Icon box */
+.icon-box {
+  width: 40px; height: 40px;
+  border-radius: 8px;
+  background: rgba(200,30,30,0.1);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.icon-box-lg { width: 56px; height: 56px; border-radius: 12px; }
+.icon-box svg { width: 20px; height: 20px; color: var(--primary); }
+.icon-box-lg svg { width: 28px; height: 28px; }
+
+/* Badge */
+.badge {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--primary);
+  background: rgba(200,30,30,0.1);
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+.badge-accent {
+  color: var(--accent);
+  background: rgba(255,215,0,0.1);
+  border: 1px solid rgba(255,215,0,0.2);
+}
+
+/* Tag */
+.tag {
+  display: inline-flex; align-items: center; gap: 4px;
+  font-size: 12px; color: rgba(200,30,30,0.9);
+  background: rgba(200,30,30,0.05);
+  border: 1px solid rgba(200,30,30,0.2);
+  padding: 4px 12px; border-radius: 999px;
+}
+
+/* Section backgrounds */
+.bg-gradient-down { background: linear-gradient(to bottom, var(--bg), rgba(26,26,26,0.3)); }
+.bg-gradient-up { background: linear-gradient(to bottom, rgba(26,26,26,0.3), var(--bg)); }
+
+/* Hero */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  padding: 64px 16px;
+}
+.hero-overlay {
+  position: absolute; inset: 0;
+  background: rgba(10,10,10,0.9);
+}
+.hero-gradient {
+  position: absolute; inset: 0;
+  background: linear-gradient(to bottom, rgba(200,30,30,0.1), transparent, rgba(10,10,10,0.95));
+}
+.hero-content {
+  position: relative; z-index: 10;
+  max-width: 768px; width: 100%;
+  display: flex; flex-direction: column; align-items: center;
+}
+
+/* VSL container */
+.vsl-container {
+  width: 100%; max-width: 640px;
+  aspect-ratio: 16/9;
+  background: var(--secondary);
+  border-radius: var(--radius);
+  display: flex; align-items: center; justify-content: center;
+  overflow: hidden;
+}
+.play-circle {
+  width: 64px; height: 64px; border-radius: 50%;
+  background: rgba(200,30,30,0.2);
+  display: flex; align-items: center; justify-content: center;
+}
+
+/* FAQ */
+.faq-item { border: 1px solid var(--border); border-radius: var(--radius); background: var(--card); overflow: hidden; }
+.faq-btn {
+  width: 100%; display: flex; align-items: center; justify-content: space-between;
+  padding: 20px; text-align: left; background: none; border: none; color: var(--fg);
+  cursor: pointer; font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 500;
+  transition: background 0.2s;
+}
+.faq-btn:hover { background: rgba(26,26,26,0.3); }
+.faq-answer { padding: 0 20px 20px; border-top: 1px solid var(--border); }
+.faq-answer p { padding-top: 16px; font-size: 14px; color: var(--muted-fg); line-height: 1.6; }
+.faq-chevron { transition: transform 0.2s; flex-shrink: 0; }
+.faq-chevron.open { transform: rotate(180deg); }
+
+/* Offer card */
+.offer-card {
+  border-radius: 16px;
+  padding: 40px;
+  background: var(--card);
+  position: relative; overflow: hidden;
+}
+.offer-corner {
+  position: absolute; top: 0; left: 0;
+  width: 96px; height: 96px;
+  background: linear-gradient(to bottom right, rgba(255,215,0,0.1), transparent);
+  border-bottom-right-radius: 100%;
+}
+
+/* WhatsApp float */
+.whatsapp-float {
+  position: fixed; bottom: 24px; right: 24px; z-index: 50;
+  width: 56px; height: 56px; border-radius: 50%;
+  background: #25D366;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 4px 12px rgba(37,211,102,0.4);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.whatsapp-float:hover { transform: scale(1.1); box-shadow: 0 6px 20px rgba(37,211,102,0.5); }
+
+/* Footer */
+footer { border-top: 1px solid var(--border); padding: 32px 16px; }
+footer a:hover { color: var(--fg); }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: rgba(200,30,30,0.4); border-radius: 3px; }
+
+/* Stars */
+.star { width: 14px; height: 14px; color: var(--accent); fill: var(--accent); }
+
+/* Responsive text */
+.title-hero { font-size: clamp(3.5rem, 10vw, 7rem); letter-spacing: 0.1em; line-height: 0.95; }
+.title-section { font-size: clamp(2rem, 5vw, 3.5rem); letter-spacing: 0.1em; }
+.title-price {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(3rem, 8vw, 4.5rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+.pre-headline { font-size: 12px; letter-spacing: 0.3em; color: var(--primary); font-weight: 600; text-transform: uppercase; }
+.subtitle { font-size: clamp(1rem, 2.5vw, 1.25rem); color: rgba(235,235,235,0.8); max-width: 560px; line-height: 1.7; }
+.border-y { border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.border-l-primary { border-left: 2px solid var(--primary); padding-left: 20px; }
+
+/* Check list */
+.check-item { display: flex; align-items: center; gap: 12px; }
+.check-circle {
+  width: 20px; height: 20px; border-radius: 50%;
+  background: rgba(200,30,30,0.2);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.check-circle svg { width: 14px; height: 14px; color: var(--primary); }
+.check-circle-accent { background: rgba(255,215,0,0.2); }
+.check-circle-accent svg { color: var(--accent); }
+
+/* Trust items */
+.trust-item { display: flex; align-items: center; gap: 8px; justify-content: center; }
+.trust-item svg { width: 16px; height: 16px; color: var(--muted-fg); }
+
+/* Highlight tag in testimonials */
+.highlight-tag {
+  font-size: 10px; font-weight: 700; letter-spacing: 0.1em;
+  color: var(--primary); background: rgba(200,30,30,0.1);
+  padding: 2px 8px; border-radius: 4px;
+}
+
+/* Value stack row */
+.value-row {
+  display: flex; align-items: center; justify-content: space-between;
+  border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 16px 20px; background: var(--card);
+  transition: border-color 0.2s;
+}
+.value-row:hover { border-color: rgba(255,215,0,0.2); }
+
+/* Alert badge */
+.alert-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(200,30,30,0.1);
+  border: 1px solid rgba(200,30,30,0.3);
+  border-radius: 999px; padding: 8px 16px;
+}
+
+/* SVG Icons inline */
+.svg-icon { display: inline-block; vertical-align: middle; }
+
+
+
+/* ===== replacement hero, isolated to avoid conflicts ===== */
+body.hero-merged {
+  background:
+    linear-gradient(180deg, rgba(0,0,0,.78), rgba(0,0,0,.84)),
+    url('https://i.ibb.co/7NSfBjb3/Chat-GPT-Image-27-de-mar-de-2026-21-56-54.png');
+  background-size: cover;
+  background-position: center top;
+  background-attachment: fixed;
+}
+.hero-top-strip {
+  width: 100%;
+  background: #ff3b30;
+  padding: 10px 16px;
+  text-align: center;
+  position: relative;
+  z-index: 5;
+}
+.hero-top-strip p {
+  color: white;
+  font-size: clamp(10px, 2.4vw, 14px);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: .02em;
+  margin: 0;
+}
+.hero-replacement {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 56px 16px 64px;
+  overflow: hidden;
+}
+.hero-replacement::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background-image:
+    linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+  background-size:32px 32px;
+  mask-image: linear-gradient(to bottom, rgba(0,0,0,.9), rgba(0,0,0,.25));
+}
+.hero-replacement::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:
+    radial-gradient(circle at 50% 24%, rgba(255,59,48,.16), transparent 28%),
+    linear-gradient(180deg, rgba(0,0,0,.18), rgba(0,0,0,.36));
+}
+.hero-replacement-inner{
+  position: relative;
+  z-index: 2;
+  width: min(100%, 980px);
+  text-align: center;
+}
+.hero-kicker{
+  color:#fff;
+  font-size: clamp(12px, 2vw, 18px);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: .02em;
+  margin-bottom: 18px;
+}
+.hero-title{
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(2.2rem, 7vw, 5.4rem);
+  line-height: .95;
+  letter-spacing: -.05em;
+  font-weight: 900;
+  margin: 0 0 18px;
+  color: white;
+}
+.hero-title .red{
+  color:#ff3b30;
+  text-shadow: 0 0 14px rgba(255,59,48,.45);
+}
+.hero-subtitle{
+  margin: 0 auto 30px;
+  max-width: 980px;
+  color: rgba(235,235,235,.92);
+  font-size: clamp(14px, 2.1vw, 20px);
+  line-height: 1.65;
+}
+.hero-vsl-frame{
+  width: 100%;
+  max-width: 980px;
+  margin: 0 auto 18px;
+  padding: 10px;
+  border-radius: 22px;
+  background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
+  border: 2px solid rgba(255,59,48,.30);
+  box-shadow: 0 0 35px rgba(255,59,48,.14), 0 20px 60px rgba(0,0,0,.28);
+}
+.hero-vsl-box{
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #0f1010;
+  border-radius: 14px;
+  overflow: hidden;
+}
+.hero-vsl-box iframe{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  border:0;
+}
+.hero-sound{
+  color: rgba(235,235,235,.92);
+  font-size: clamp(13px, 1.8vw, 16px);
+  font-style: italic;
+  margin: 0 0 22px;
+}
+.hero-cta-wrap{
+  display:flex;
+  justify-content:center;
+}
+.hero-cta-wrap .btn-primary{
+  max-width: 448px;
+  width: 100%;
+}
+.hero-trust{
+  margin-top: 30px;
+  padding-top: 26px;
+  border-top: 1px solid #3f3f46;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 22px 40px;
+}
+.hero-trust-item{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  color:#d4d4d8;
+}
+.hero-trust-item span{
+  font-size: clamp(10px, 1.6vw, 12px);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: .24em;
+}
+.hero-bg-orbs{
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+}
+.hero-bg-orbs .orb1,
+.hero-bg-orbs .orb2{
+  position:absolute;
+  width:50%;
+  height:50%;
+  border-radius:999px;
+  background: rgba(255,59,48,.08);
+  filter: blur(120px);
+}
+.hero-bg-orbs .orb1{ top:-10%; left:-10%; }
+.hero-bg-orbs .orb2{ bottom:-10%; right:-10%; }
+
+@media (max-width: 768px){
+  body.hero-merged{ background-attachment: scroll; }
+  .hero-replacement{ min-height: auto; padding-top: 34px; }
+  .hero-trust{ gap: 16px 22px; }
+}
+
+
+/* Reddit mini head cursor effect */
+.cursor-glow{
+  position: fixed;
+  width: 22px;
+  height: 22px;
+  border-radius: 999px;
+  pointer-events: none;
+  z-index: 9998;
+  mix-blend-mode: screen;
+  background: radial-gradient(circle, rgba(255,178,44,.95) 0%, rgba(255,94,42,.55) 38%, rgba(255,59,48,.15) 72%, transparent 100%);
+  transform: translate(-50%, -50%);
+  opacity: .82;
+  filter: blur(.6px);
+}
+.cursor-trail{
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  pointer-events: none;
+  z-index: 9997;
+  background: radial-gradient(circle, rgba(255,255,255,.98), rgba(255,178,44,.52), transparent 72%);
+  transform: translate(-50%, -50%);
+  animation: trailFade .55s ease-out forwards;
+}
+@keyframes trailFade{
+  from{ opacity:.95; transform:translate(-50%,-50%) scale(1); }
+  to{ opacity:0; transform:translate(-50%,-50%) scale(2.8); }
+}
+.reddit-burst{
+  position: fixed;
+  width: 28px;
+  height: 28px;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%) scale(.8);
+  animation: redditBurst .8s ease-out forwards;
+  filter: drop-shadow(0 0 18px rgba(255,94,42,.32));
+}
+.reddit-burst svg{ width:100%; height:100%; display:block; }
+@keyframes redditBurst{
+  0%{ opacity:0; transform:translate(-50%,-50%) scale(.35) rotate(-8deg); }
+  18%{ opacity:1; transform:translate(-50%,-50%) scale(1) rotate(0deg); }
+  100%{ opacity:0; transform:translate(-50%,-88%) scale(1.9) rotate(16deg); }
+}
+@media (max-width: 768px){
+  .cursor-glow, .cursor-trail{ display:none !important; }
+}
+
+</style>
+</head>
+<body class="hero-merged">
+
+<div class="hero-top-strip">
+  <p>Aproveite e veja antes que este vídeo saia do ar!</p>
+</div>
+
+<section class="hero-replacement">
+  <div class="hero-bg-orbs" aria-hidden="true">
+    <div class="orb1"></div>
+    <div class="orb2"></div>
+  </div>
+
+  <div class="hero-replacement-inner">
+    <p class="hero-title">
+      Descubra o Método<br>
+      para criar um <span class="red">Canal Dark Sólido</span>
+    </p>
+
+    <p class="hero-subtitle">
+      Aprenda como transformar histórias narradas em conteúdo viral, construir uma audiência forte
+      e criar um canal que não depende de tendências passageiras. Veja o vídeo até o final e
+      entenda como começar com o <strong style="color:#ff3b30;text-shadow:0 0 12px rgba(255,59,48,.35);">Método Narrativo Viral</strong>.
+    </p>
+
+    <div class="hero-vsl-frame">
+      <div class="hero-vsl-box">
+        <iframe src="https://fast.wistia.net/embed/iframe/o27s1fh4rn"
+          title="Vídeo de apresentação"
+          allow="autoplay; fullscreen"
+          scrolling="no"
+          allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <p class="hero-sound">⚠️ Por favor, verifique se o som está ligado!</p>
+
+    <div class="hero-cta-wrap">
+      <a href="#offer-card" class="btn-primary cta-glow">QUERO O ACESSO À ÁREA DE MEMBROS</a>
+    </div>
+
+    <div class="hero-trust">
+      <div class="hero-trust-item">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff3b30" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="m9 12 2 2 4-4"></path></svg>
+        <span>Compra Segura</span>
+      </div>
+      <div class="hero-trust-item">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff3b30" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+        <span>Acesso Imediato</span>
+      </div>
+      <div class="hero-trust-item">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff3b30" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+        <span>Privacidade Protegida</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="red-divider"></div>
+
+
+<!-- ============ PROBLEMA ============ -->
+<section class="py-24 px-4 bg-gradient-down">
+  <div class="container">
+    <p class="pre-headline text-center mb-3">A verdade incômoda do mercado</p>
+    <h2 class="title-section text-center mb-4">POR QUE A MAIORIA <span class="text-primary">FRACASSA</span> COM CANAIS DARK?</h2>
+    <div class="red-divider red-divider-section mb-6"></div>
+    <p class="text-soft text-center mb-14 mx-auto" style="max-width:560px;line-height:1.7">
+      Hoje todo mundo fala de canal dark. Mas quase ninguém fala sobre o que acontece depois que você cria o canal e o hype passa.
+    </p>
+
+    <div class="grid grid-1 sm-grid-2" style="gap:16px; margin-bottom:56px;">
+      <div class="card flex items-start gap-4">
+        <div class="icon-box"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div>
+        <p style="font-size:14px;color:rgba(235,235,235,0.8);line-height:1.6">Te mostram nichos do momento, mas ninguém fala que eles morrem em semanas.</p>
+      </div>
+      <div class="card flex items-start gap-4">
+        <div class="icon-box"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div>
+        <p style="font-size:14px;color:rgba(235,235,235,0.8);line-height:1.6">Você cria um canal, investe tempo, e quando o nicho satura... o canal vai junto.</p>
+      </div>
+      <div class="card flex items-start gap-4">
+        <div class="icon-box"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+        <p style="font-size:14px;color:rgba(235,235,235,0.8);line-height:1.6">Muito esforço, pouca consistência. Resultados que somem tão rápido quanto aparecem.</p>
+      </div>
+      <div class="card flex items-start gap-4">
+        <div class="icon-box"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg></div>
+        <p style="font-size:14px;color:rgba(235,235,235,0.8);line-height:1.6">Te ensinam a correr atrás do que está em alta, sem estrutura, sem direção e sem consistência. Só que isso não se sustenta.</p>
+      </div>
+      <div class="card flex items-start gap-4">
+        <div class="icon-box"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M16 16s-1.5-2-4-2-4 2-4 2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg></div>
+        <p style="font-size:14px;color:rgba(235,235,235,0.8);line-height:1.6">A frustração de quem segue tendência sem estrutura é sempre a mesma: recomeçar do zero.</p>
+      </div>
+      <div class="card flex items-start gap-4">
+        <div class="icon-box"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
+        <p style="font-size:14px;color:rgba(235,235,235,0.8);line-height:1.6">O problema não é falta de vontade. O problema é que ninguém te ensinou um método de verdade.</p>
+      </div>
+    </div>
+
+    <div class="mx-auto space-y-6 mb-14" style="max-width:560px">
+      <p class="text-soft" style="line-height:1.7">Você já deve ter visto dezenas de vídeos prometendo que canais dark são a "máquina de dinheiro" da internet. E no começo, parece que funciona. Você escolhe um nicho em alta, monta seu canal, começa a postar... e os primeiros resultados aparecem.</p>
+      <p class="text-soft" style="line-height:1.7">Mas depois de algumas semanas, <span class="text-primary font-semibold">o algoritmo muda</span>. O nicho satura. Os views despencam. E você se vê de volta à estaca zero, procurando o "próximo nicho do momento".</p>
+      <p class="text-soft" style="line-height:1.7">Esse ciclo se repete porque a maioria dos métodos ensina você a <span class="text-primary font-semibold">seguir tendências</span>, não a <span class="text-accent font-semibold">construir algo sólido</span>. E a diferença entre quem ganha dinheiro de verdade e quem fica patinando é exatamente essa: <span class="text-primary font-semibold">método vs. improviso</span>.</p>
+    </div>
+
+    <div class="text-center border-l-primary mx-auto" style="max-width:512px">
+      <p class="text-softer italic" style="line-height:1.7">"Se o seu modelo depende de tendência, você não tem um negócio. Você tem uma aposta."</p>
+    </div>
+  </div>
+</section>
+
+<div class="red-divider"></div>
+
+<!-- ============ DIFERENCIAL ============ -->
+<section class="py-24 px-4">
+  <div class="container">
+    <p class="pre-headline text-center mb-3">O que muda tudo</p>
+    <h2 class="title-section text-center mb-4">POR QUE O <span class="text-primary">MÉTODO NARRATIVO VIRAL</span> É DIFERENTE</h2>
+    <div class="red-divider red-divider-section mb-6"></div>
+    <p class="text-soft text-center mb-14 mx-auto" style="max-width:560px;line-height:1.7">Existe uma diferença enorme entre seguir tendência e aplicar um método comprovado. O Método Narrativo Viral é baseado em um formato que funciona há anos — e vai continuar funcionando.</p>
+
+    <div class="space-y-4 mx-auto" style="max-width:560px;margin-bottom:64px">
+      <div class="border-l-primary" style="padding:8px 0 8px 20px"><p><span class="text-primary font-semibold">O problema não é criar conteúdo.</span> <span class="text-soft">É depender de tendências que morrem.</span></p></div>
+      <div class="border-l-primary" style="padding:8px 0 8px 20px"><p><span class="text-primary font-semibold">O Método Narrativo Viral entrega estrutura.</span> <span class="text-soft">Não é improviso, é método.</span></p></div>
+      <div class="border-l-primary" style="padding:8px 0 8px 20px"><p><span class="text-primary font-semibold">Histórias narradas não saturam.</span> <span class="text-soft">Elas prendem, engajam e escalam.</span></p></div>
+      <div class="border-l-primary" style="padding:8px 0 8px 20px"><p><span class="text-primary font-semibold">Enquanto outros correm atrás de hype,</span> <span class="text-soft">você constrói uma base sólida.</span></p></div>
+    </div>
+
+    <div class="grid grid-1 sm-grid-2" style="gap:16px;margin-bottom:56px">
+      <div class="card">
+        <div class="icon-box mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
+        <h3 style="font-size:18px;letter-spacing:0.05em;margin-bottom:8px">ALTO PODER DE RETENÇÃO</h3>
+        <p style="font-size:14px;color:var(--muted-fg);line-height:1.6">Histórias narradas despertam curiosidade e prendem a atenção do início ao fim. O algoritmo ama isso.</p>
+      </div>
+      <div class="card">
+        <div class="icon-box mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+        <h3 style="font-size:18px;letter-spacing:0.05em;margin-bottom:8px">PERFORMANCE DURADOURA</h3>
+        <p style="font-size:14px;color:var(--muted-fg);line-height:1.6">Conteúdos narrativos continuam performando muito tempo depois de publicados. São vídeos que trabalham por você.</p>
+      </div>
+      <div class="card">
+        <div class="icon-box mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <h3 style="font-size:18px;letter-spacing:0.05em;margin-bottom:8px">ESTABILIDADE REAL</h3>
+        <p style="font-size:14px;color:var(--muted-fg);line-height:1.6">Não dependem de hype passageiro. São um formato muito mais estável do que tendências rasas que morrem em semanas.</p>
+      </div>
+      <div class="card">
+        <div class="icon-box mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
+        <h3 style="font-size:18px;letter-spacing:0.05em;margin-bottom:8px">CURIOSIDADE NATURAL</h3>
+        <p style="font-size:14px;color:var(--muted-fg);line-height:1.6">Histórias ativam gatilhos de curiosidade que fazem as pessoas assistirem até o final e buscarem mais conteúdo.</p>
+      </div>
+      <div class="card">
+        <div class="icon-box mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div>
+        <h3 style="font-size:18px;letter-spacing:0.05em;margin-bottom:8px">ESCALABILIDADE COMPROVADA</h3>
+        <p style="font-size:14px;color:var(--muted-fg);line-height:1.6">Quanto mais conteúdo você publica, maior o efeito bola de neve. Cada vídeo fortalece o canal inteiro.</p>
+      </div>
+      <div class="card">
+        <div class="icon-box mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+        <h3 style="font-size:18px;letter-spacing:0.05em;margin-bottom:8px">PRODUÇÃO RÁPIDA</h3>
+        <p style="font-size:14px;color:var(--muted-fg);line-height:1.6">Com o método certo e materiais prontos, você produz conteúdo em uma fração do tempo que gastaria do zero.</p>
+      </div>
+    </div>
+
+    <div class="mx-auto space-y-6" style="max-width:560px">
+      <p class="text-soft" style="line-height:1.7">Pense nos maiores canais de storytelling do YouTube. Eles não dependem de nenhum nicho específico. Eles não precisam "surfar trends". Eles simplesmente contam histórias — e as pessoas assistem.</p>
+      <p class="text-soft" style="line-height:1.7">O <span class="text-primary font-semibold">Método Narrativo Viral</span> te dá exatamente isso: a estrutura para criar conteúdo que <span class="text-accent font-semibold">prende</span>, <span class="text-accent font-semibold">engaja</span> e <span class="text-accent font-semibold">escala</span> — sem depender de modinha.</p>
+    </div>
+  </div>
+</section>
+
+<div class="red-divider"></div>
+
+<!-- ============ CONTEÚDO ============ -->
+<section class="py-24 px-4 bg-gradient-down">
+  <div class="container">
+    <p class="pre-headline text-center mb-3">Tudo incluído no seu acesso</p>
+    <h2 class="title-section text-center mb-4">O QUE VOCÊ VAI <span class="text-primary">RECEBER</span></h2>
+    <div class="red-divider red-divider-section mb-6"></div>
+    <p class="text-soft text-center mb-14 mx-auto" style="max-width:560px;line-height:1.7">Não é um cursinho raso. É um arsenal completo de ferramentas, materiais e estratégias para você começar a produzir conteúdo narrativo viral imediatamente.</p>
+
+    <div class="space-y-6">
+      <!-- Card 1 -->
+      <div class="card p-6" style="padding:32px;border:1px solid rgba(255,215,0,0.30);box-shadow:0 0 32px rgba(255,215,0,0.08), 0 16px 42px rgba(0,0,0,.22);background:linear-gradient(180deg, rgba(255,215,0,0.06), rgba(18,18,18,0.96));">
+        <div class="flex items-start gap-5">
+          <div class="icon-box icon-box-lg"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg></div>
+          <div class="flex-1">
+            <span class="badge">PRINCIPAL</span>
+            <h3 style="font-size:clamp(1.1rem,3vw,1.5rem);letter-spacing:0.05em;margin-bottom:12px">GUIA COMPLETO DO MÉTODO</h3>
+            <p style="font-size:14px;color:var(--muted-fg);line-height:1.6;margin-bottom:16px">O método passo a passo para aprender como estruturar, criar e organizar conteúdo narrativo estratégico. Tudo explicado de forma clara e prática para que você aplique desde o primeiro dia.</p>
+            <div class="flex" style="flex-wrap:wrap;gap:8px">
+              <span class="tag">→ Passo a passo detalhado</span>
+              <span class="tag">→ Estratégias de estruturação</span>
+              <span class="tag">→ Aplicação imediata</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Card 2 -->
+      <div class="card p-6" style="padding:32px">
+        <div class="flex items-start gap-5">
+          <div class="icon-box icon-box-lg"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg></div>
+          <div class="flex-1">
+            <span class="badge">BIBLIOTECA</span>
+            <h3 style="font-size:clamp(1.1rem,3vw,1.5rem);letter-spacing:0.05em;margin-bottom:12px">BIBLIOTECA DE HISTÓRIAS E ÁUDIOS</h3>
+            <p style="font-size:14px;color:var(--muted-fg);line-height:1.6;margin-bottom:16px">Mais de 200 histórias organizadas e mais de 1300 áudios narrados prontos para postagem. Material organizado para facilitar produção rápida. Reposições mensais de novos áudios e materiais.</p>
+            <div class="flex" style="flex-wrap:wrap;gap:8px">
+              <span class="tag">→ +200 histórias prontas</span>
+              <span class="tag">→ +1300 áudios narrados</span>
+              <span class="tag">→ Reposições mensais</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Card 3 -->
+      <div class="card p-6" style="padding:32px">
+        <div class="flex items-start gap-5">
+          <div class="icon-box icon-box-lg"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12V8H6a2 2 0 01-2-2c0-1.1.9-2 2-2h12v4"/><path d="M4 6v12c0 1.1.9 2 2 2h14v-4"/><path d="M18 12a2 2 0 000 4h4v-4h-4z"/></svg></div>
+          <div class="flex-1">
+            <span class="badge badge-accent" style="box-shadow:0 0 22px rgba(255,215,0,.12);">BÔNUS</span>
+            <h3 style="font-size:clamp(1.1rem,3vw,1.5rem);letter-spacing:0.05em;margin-bottom:12px">BÔNUS EXTRAS ESPECIAIS</h3>
+            <p style="font-size:14px;color:var(--muted-fg);line-height:1.6;margin-bottom:16px">
+<div style="font-size:14px;color:var(--muted-fg);line-height:1.6;margin-bottom:16px">
+  Além do método principal, você também recebe bônus pensados para aumentar velocidade, repertório e potencial de alcance do seu conteúdo.
+</div>
+<div style="display:grid;gap:10px;margin-bottom:16px">
+  <div style="border:1px solid rgba(255,215,0,0.22);background:rgba(255,215,0,0.06);border-radius:12px;padding:12px 14px">
+    <div style="font-weight:700;color:var(--accent);font-size:13px;letter-spacing:.04em;text-transform:uppercase;margin-bottom:4px">Estratégias validadas para viralização</div>
+    <div style="font-size:13px;color:var(--muted-fg);line-height:1.5">Direções práticas para aumentar retenção, alcance e performance dos seus vídeos.</div>
+  </div>
+  <div style="border:1px solid rgba(255,215,0,0.22);background:rgba(255,215,0,0.06);border-radius:12px;padding:12px 14px">
+    <div style="font-weight:700;color:var(--accent);font-size:13px;letter-spacing:.04em;text-transform:uppercase;margin-bottom:4px">Guia para reutilização de vídeos — conteúdo infinito</div>
+    <div style="font-size:13px;color:var(--muted-fg);line-height:1.5">Aprenda a reaproveitar material de forma estratégica para produzir mais sem depender de começar do zero.</div>
+  </div>
+  <div style="border:1px solid rgba(255,215,0,0.22);background:rgba(255,215,0,0.06);border-radius:12px;padding:12px 14px">
+    <div style="font-weight:700;color:var(--accent);font-size:13px;letter-spacing:.04em;text-transform:uppercase;margin-bottom:4px">Pack de músicas de fundo sem copyright</div>
+    <div style="font-size:13px;color:var(--muted-fg);line-height:1.5">Trilhas prontas para dar mais atmosfera aos vídeos sem se preocupar com bloqueios por direitos autorais.</div>
+  </div>
+</div></p>
+            <div class="flex" style="flex-wrap:wrap;gap:8px">
+<span class="tag">→ Estratégias de viralização</span>
+<span class="tag">→ Conteúdo infinito</span>
+<span class="tag">→ Músicas sem copyright</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="red-divider"></div>
+
+<!-- ============ DEPOIMENTOS ============ -->
+<section class="py-24 px-4 bg-gradient-down">
+  <div class="container">
+    <p class="pre-headline text-center mb-3">Quem já está aplicando</p>
+    <h2 class="title-section text-center mb-4">RESULTADOS <span class="text-primary">REAIS</span></h2>
+    <div class="red-divider red-divider-section mb-14"></div>
+
+    <div class="grid grid-1 sm-grid-2" style="gap:20px">
+      <div class="card" style="border-radius:12px;padding:24px">
+        <div class="flex gap-1 mb-3">
+          <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <p style="font-size:14px;color:rgba(235,235,235,0.8);line-height:1.6;margin-bottom:16px;font-style:italic">"Bicho, eu já tinha tentado de tudo... Fiz canal de curiosidade, de quiz, e nada passava de 100 views. 🤡 Já tava achando que o problema era eu. Comecei a aplicar a estrutura de narrativa que vocês ensinam e, do nada, um vídeo de duas semanas atrás começou a performar. O gráfico não para de subir! Finalmente entendi como prender o cara no vídeo até o final. 🔥"</p>
+        <div class="flex justify-between items-center">
+          <span class="font-semibold" style="font-size:14px">Lucas M.</span>
+          <span class="highlight-tag">GRÁFICO SUBINDO</span>
+        </div>
+      </div>
+      <div class="card" style="border-radius:12px;padding:24px">
+        <div class="flex gap-1 mb-3">
+          <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <p style="font-size:14px;color:rgba(235,235,235,0.8);line-height:1.6;margin-bottom:16px;font-style:italic">"Pra quem trabalha o dia todo e só tem a noite pra editar, esse método salvou demais. Antes eu perdia horas sofrendo pra baixar as histórias e me virar pra editar. Com a biblioteca de materiais e os modelos de história, ontem eu fechei três vídeos em uma sentada só. A qualidade ficou muito acima do que eu fazia sozinha, adorei🤭🥰"</p>
+        <div class="flex justify-between items-center">
+          <span class="font-semibold" style="font-size:14px">Ana C.</span>
+          <span class="highlight-tag">3 VÍDEOS EM UMA NOITE</span>
+        </div>
+      </div>
+      <div class="card" style="border-radius:12px;padding:24px">
+        <div class="flex gap-1 mb-3">
+          <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <p style="font-size:14px;color:rgba(235,235,235,0.8);line-height:1.6;margin-bottom:16px;font-style:italic">"Vou ser sincero: achei que ia ser só mais um curso com as mesmas dicas de sempre. Mas o que entrega de material e o guia prático são bem diferentes. 👊 Não tem aquela enrolação de 'mentalidade', é direto no que funciona pra viralizar. Valeu cada centavo só pelo tempo que economizei com os áudios e as estruturas prontas. Vale a pena! ✅"</p>
+        <div class="flex justify-between items-center">
+          <span class="font-semibold" style="font-size:14px">Rafael S.</span>
+          <span class="highlight-tag">DIRETO NO QUE FUNCIONA</span>
+        </div>
+      </div>
+      <div class="card" style="border-radius:12px;padding:24px">
+        <div class="flex gap-1 mb-3">
+          <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <p style="font-size:14px;color:rgba(235,235,235,0.8);line-height:1.6;margin-bottom:16px;font-style:italic">"Abri o canal tem nem um mês e um vídeo meu de história bateu 12k de views ontem!!!! Fiquei em choque quando abri o Studio e vi as notificações kkkk Animada demais pra postar o próximo! ✨"</p>
+        <div class="flex justify-between items-center">
+          <span class="font-semibold" style="font-size:14px">Camila R.</span>
+          <span class="highlight-tag">12K VIEWS EM 1 MÊS</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="red-divider"></div>
+
+<!-- ============ EMPILHAMENTO DE VALOR ============ -->
+<section class="py-24 px-4">
+  <div class="container-md">
+    <p class="pre-headline text-center mb-3" style="color:var(--accent)">Quanto isso realmente vale?</p>
+    <h2 class="title-section text-center mb-4">EMPILHAMENTO DE <span class="text-accent">VALOR</span></h2>
+    <div style="width:64px;height:1px;background:rgba(255,215,0,0.4);margin:0 auto 24px"></div>
+    <p class="text-soft text-center mb-14 mx-auto" style="max-width:560px;line-height:1.7">Se você fosse comprar cada um desses materiais separadamente, pagaria R$116,80. Mas hoje, você leva tudo em um único acesso.</p>
+
+    <div class="space-y-3 mb-10" style="margin-bottom:48px">
+      <div class="value-row">
+        <div class="flex items-center gap-3">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          <span style="font-size:14px">Guia completo do Método Narrativo Viral</span>
+        </div>
+        <span style="font-family:'Bebas Neue',sans-serif;color:var(--accent);letter-spacing:0.05em;white-space:nowrap;margin-left:12px">R$67,00</span>
+      </div>
+      <div class="value-row">
+        <div class="flex items-center gap-3">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          <span style="font-size:14px">Biblioteca com +200 histórias narradas e +1300 áudios organizados</span>
+        </div>
+        <span style="font-family:'Bebas Neue',sans-serif;color:var(--accent);letter-spacing:0.05em;white-space:nowrap;margin-left:12px">R$29,90</span>
+      </div>
+      <div class="value-row">
+        <div class="flex items-center gap-3">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          <span style="font-size:14px">Bônus extras para acelerar seus resultados</span>
+        </div>
+        <span style="font-family:'Bebas Neue',sans-serif;color:var(--accent);letter-spacing:0.05em;white-space:nowrap;margin-left:12px">R$19,90</span>
+      </div>
+    </div>
+
+    <div class="text-center card" style="border-color:rgba(255,215,0,0.2);border-radius:12px;padding:32px;box-shadow:0 0 30px 4px rgba(255,215,0,0.06);margin-bottom:40px">
+      <p style="font-size:14px;color:var(--muted-fg);margin-bottom:8px">Valor total se vendido separadamente:</p>
+      <p style="font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,5vw,3rem);color:var(--muted-fg);text-decoration:line-through;letter-spacing:0.1em;margin-bottom:12px">R$116,80</p>
+      <div style="width:48px;height:1px;background:rgba(255,215,0,0.3);margin:0 auto 12px"></div>
+      <p style="margin-bottom:8px">Mas hoje, você leva <span class="text-accent font-semibold">tudo isso</span> por:</p>
+      <p class="title-price text-accent">R$29,90</p>
+      <p style="font-size:12px;color:var(--muted-fg);margin-top:8px">ou 6x de R$5,61</p>
+    </div>
+
+    <div class="text-center">
+      <button class="btn-primary cta-glow" onclick="document.getElementById('offer-card').scrollIntoView({behavior:'smooth'})">GARANTIR MEU ACESSO AGORA</button>
+    </div>
+  </div>
+</section>
+
+<div class="red-divider"></div>
+
+<!-- ============ URGÊNCIA ============ -->
+<section class="py-20 px-4 bg-gradient-up">
+  <div class="container-md text-center">
+    <div class="alert-badge mb-8" style="display:inline-flex">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+      <span style="font-size:12px;font-weight:700;color:var(--primary);letter-spacing:0.1em;text-transform:uppercase">Atenção — Preço promocional</span>
+    </div>
+
+    <h2 class="title-section mb-6" style="line-height:1.1">ESSE PREÇO <span class="text-primary">NÃO VAI DURAR</span> PARA SEMPRE</h2>
+    <p class="text-soft mx-auto mb-8" style="max-width:512px;line-height:1.7">O Método Narrativo Viral está em preço de lançamento. Conforme mais pessoas entram e mais materiais são adicionados, o preço vai subir. Quem entra agora garante acesso a tudo — inclusive futuras atualizações — pelo menor preço que esse produto vai ter.</p>
+
+    <div class="grid grid-1 sm-grid-3" style="gap:16px;margin-bottom:40px">
+      <div class="card text-center" style="padding:20px">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin:0 auto 8px"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <h3 style="font-size:18px;letter-spacing:0.05em">PREÇO DE LANÇAMENTO</h3>
+        <p style="font-size:12px;color:var(--muted-fg);margin-top:4px">Disponível por tempo limitado</p>
+      </div>
+      <div class="card text-center" style="padding:20px">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin:0 auto 8px"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+        <h3 style="font-size:18px;letter-spacing:0.05em">ATUALIZAÇÕES GRÁTIS</h3>
+        <p style="font-size:12px;color:var(--muted-fg);margin-top:4px">Novos materiais todo mês</p>
+      </div>
+      <div class="card text-center" style="padding:20px">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin:0 auto 8px"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        <h3 style="font-size:18px;letter-spacing:0.05em">PREÇO VAI SUBIR</h3>
+        <p style="font-size:12px;color:var(--muted-fg);margin-top:4px">Garanta antes do aumento</p>
+      </div>
+    </div>
+
+    <button class="btn-primary cta-glow" onclick="document.getElementById('offer-card').scrollIntoView({behavior:'smooth'})">QUERO GARANTIR ESSE PREÇO</button>
+  </div>
+</section>
+
+<div class="red-divider"></div>
+
+<!-- ============ OFERTA ============ -->
+<section class="py-24 px-4" id="offer-card">
+  <div class="container-sm">
+    <div class="offer-glow offer-card">
+      <div class="offer-corner"></div>
+
+      <div class="text-center mb-6" style="position:relative;z-index:10">
+        <span class="badge-accent inline-flex gap-2" style="padding:6px 16px;border-radius:999px;font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="var(--accent)" stroke="var(--accent)" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          Oferta Especial de Lançamento
+        </span>
+      </div>
+
+      <h3 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(1.8rem,5vw,2.5rem);text-align:center;letter-spacing:0.1em;margin-bottom:32px;color:var(--accent);position:relative;z-index:10">MÉTODO NARRATIVO VIRAL</h3>
+
+      <div class="space-y-3 mb-8">
+        <div class="check-item"><div class="check-circle"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><span style="font-size:14px">Guia completo do método</span></div>
+        <div class="check-item"><div class="check-circle"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><span style="font-size:14px">+200 histórias organizadas</span></div>
+        <div class="check-item"><div class="check-circle"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><span style="font-size:14px">+1300 áudios narrados prontos</span></div>
+        <div class="check-item"><div class="check-circle"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><span style="font-size:14px">Reposições mensais de conteúdo</span></div>
+        <div class="check-item"><div class="check-circle"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><span style="font-size:14px">Bônus extras para acelerar resultados</span></div>
+        <div class="check-item"><div class="check-circle"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><span style="font-size:14px">Acesso ao material</span></div>
+        <div class="check-item"><div class="check-circle"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><span style="font-size:14px">Todas as futuras atualizações</span></div>
+      </div>
+
+      <div class="text-center border-y py-6 mb-8">
+        <p class="line-through text-muted mb-1" style="font-size:14px">De R$67,90</p>
+        <p class="text-softer mb-3" style="font-size:12px">Por apenas</p>
+        <p class="title-price text-accent">R$29,90</p>
+        <p class="text-muted mt-2" style="font-size:12px">ou 6x de R$5,61</p>
+        <p class="font-semibold mt-2" style="font-size:12px;color:rgba(255,215,0,0.8)">Economia de mais de 55%</p>
+      </div>
+
+      <a href="#" class="btn-primary cta-glow w-full" style="display:block;text-align:center">GARANTIR MEU ACESSO</a>
+
+      <div class="mt-6 space-y-2" style="margin-top:24px">
+        <div class="trust-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span style="font-size:12px;color:var(--muted-fg)">Pagamento 100% seguro</span></div>
+        <div class="trust-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg><span style="font-size:12px;color:var(--muted-fg)">Acesso imediato após confirmação</span></div>
+        <div class="trust-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 102.13-9.36L1 10"/></svg><span style="font-size:12px;color:var(--muted-fg)">Garantia de 7 dias</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="red-divider"></div>
+
+<!-- ============ GARANTIA ============ -->
+<section class="py-20 px-4">
+  <div class="container-sm">
+    <div class="card text-center" style="border-radius:16px;padding:40px">
+      <div style="width:64px;height:64px;border-radius:50%;background:rgba(200,30,30,0.1);display:flex;align-items:center;justify-content:center;margin:0 auto 24px">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+      </div>
+      <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(1.8rem,5vw,2.5rem);letter-spacing:0.1em;margin-bottom:16px">GARANTIA DE <span class="text-accent">7 DIAS</span></h2>
+      <p class="text-soft" style="line-height:1.7;margin-bottom:24px">Você tem <span class="text-primary font-semibold">7 dias</span> para acessar todo o material, explorar o método, testar os áudios e decidir se é para você. Se por qualquer motivo sentir que não valeu a pena, basta pedir o reembolso e devolvemos <span class="text-accent font-semibold">100% do seu dinheiro</span>. Sem perguntas, sem burocracia.</p>
+      <p class="text-muted italic" style="font-size:14px">O risco é zero. A decisão é sua.</p>
+    </div>
+  </div>
+</section>
+
+<div class="red-divider"></div>
+
+<!-- ============ FAQ ============ -->
+<section class="py-24 px-4">
+  <div class="container-md">
+    <p class="pre-headline text-center mb-3">Tire suas dúvidas</p>
+    <h2 class="title-section text-center mb-4">PERGUNTAS <span class="text-primary">FREQUENTES</span></h2>
+    <div class="red-divider red-divider-section mb-14"></div>
+
+    <div class="space-y-3" id="faq-container">
+      <!-- FAQs rendered by JS below -->
+    </div>
+  </div>
+</section>
+
+<div class="red-divider"></div>
+
+<!-- ============ CTA FINAL ============ -->
+<section class="py-28 px-4 bg-gradient-down">
+  <div class="container-md text-center">
+    <h2 class="title-section mb-6" style="line-height:1.1">PRONTO PARA APLICAR O <span class="text-accent">MÉTODO NARRATIVO VIRAL</span>?</h2>
+    <p class="text-soft mb-6 mx-auto" style="max-width:512px;line-height:1.7;font-size:clamp(1rem,2.5vw,1.125rem)">Junte-se a centenas de pessoas que já estão descobrindo como transformar histórias narradas em conteúdo com grande potencial de alcance.</p>
+    <p class="text-softer mb-10 mx-auto" style="max-width:448px;font-size:14px;line-height:1.7">Não espere o preço subir. Não espere o próximo "nicho da moda" morrer. Comece agora com um método que realmente funciona.</p>
+    <button class="btn-primary cta-glow" onclick="document.getElementById('offer-card').scrollIntoView({behavior:'smooth'})">GARANTIR MEU ACESSO AGORA</button>
+    <p class="text-muted mt-6" style="font-size:12px">⚡ Acesso imediato • 🛡️ Garantia de 7 dias • 🔒 Pagamento seguro</p>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="container" style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px">
+    <p style="font-size:12px;color:var(--muted-fg)">© 2025 Método Narrativo Viral. Todos os direitos reservados.</p>
+    <div class="flex items-center gap-4">
+      <a href="#" style="font-size:12px;color:var(--muted-fg);transition:color 0.2s">Termos de Uso</a>
+      <a href="#" style="font-size:12px;color:var(--muted-fg);transition:color 0.2s">Política de Privacidade</a>
+      <a href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20vim%20pela%20p%C3%A1gina%20do%20M%C3%A9todo%20Narrativo%20Viral%20e%20quero%20tirar%20uma%20d%C3%BAvida." target="_blank" rel="noopener noreferrer" style="color:var(--muted-fg);transition:color 0.2s" aria-label="WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ WHATSAPP FLUTUANTE ============ -->
+<a href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20vim%20pela%20p%C3%A1gina%20do%20M%C3%A9todo%20Narrativo%20Viral%20e%20quero%20tirar%20uma%20d%C3%BAvida." target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Contato via WhatsApp">
+  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="white" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+</a>
+
+<script>
+// FAQ accordion
+const faqs = [
+  { q: "O que exatamente é o Método Narrativo Viral?", a: "É um método completo que ensina como criar conteúdo narrativo estratégico para canais dark. Inclui um guia prático, uma biblioteca com mais de 200 histórias e mais de 1300 áudios narrados prontos para uso." },
+  { q: "Preciso ter experiência para aplicar o método?", a: "Não. O método foi criado para ser simples e direto. Mesmo que você nunca tenha criado um canal, vai conseguir aplicar seguindo o passo a passo do guia." },
+  { q: "Quanto tempo leva para ver resultados?", a: "Depende da sua dedicação, mas membros que aplicam o método de forma consistente começam a ver tração nas primeiras semanas. Os materiais prontos aceleram muito o processo." },
+  { q: "O acesso é vitalício?", a: "Sim. Você paga uma vez e tem acesso a todo o material, incluindo as atualizações e reposições mensais de novos áudios e histórias." },
+  { q: "E se eu não gostar?", a: "Você tem 7 dias de garantia incondicional. Se por qualquer motivo sentir que não é para você, basta solicitar o reembolso e devolvemos 100% do seu dinheiro." },
+  { q: "Como recebo o acesso?", a: "Imediatamente após a confirmação do pagamento, você recebe o acesso à área de membros com todo o material disponível." },
+  { q: "Esse método funciona para qualquer plataforma?", a: "O foco principal é YouTube, mas os conceitos de narrativa e storytelling podem ser adaptados para qualquer plataforma de vídeo, como TikTok, Instagram Reels e Shorts." },
+];
+
+const container = document.getElementById('faq-container');
+let openIndex = null;
+
+function renderFAQs() {
+  container.innerHTML = faqs.map((faq, i) => `
+    <div class="faq-item">
+      <button class="faq-btn" onclick="toggleFAQ(${i})">
+        <span style="padding-right:16px">${faq.q}</span>
+        <svg class="faq-chevron ${openIndex === i ? 'open' : ''}" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      ${openIndex === i ? `<div class="faq-answer"><p>${faq.a}</p></div>` : ''}
+    </div>
+  `).join('');
+}
+
+function toggleFAQ(i) {
+  openIndex = openIndex === i ? null : i;
+  renderFAQs();
+}
+
+renderFAQs();
+</script>
+<style>
+/* ESCONDE TEXTO DO TOPO */
+.pre-headline {
+  display: none !important;
+}
+
+/* LOGO */
+.logo-topo {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.logo-topo img {
+  max-width: 260px;
+}
+
+/* TÍTULO ESTILO REFERÊNCIA */
+.title-hero {
+  font-size: clamp(2.5rem, 6vw, 3.5rem) !important;
+  line-height: 1.3 !important;
+  font-weight: 500 !important;
+  text-align: center !important;
+  max-width: 850px;
+  margin: 0 auto !important;
+}
+
+/* DESTAQUE VERMELHO */
+.title-hero .destaque {
+  color: #ff1a1a;
+  font-weight: 800;
+}
+
+/* Reddit mini head cursor effect */
+.cursor-glow{
+  position: fixed;
+  width: 22px;
+  height: 22px;
+  border-radius: 999px;
+  pointer-events: none;
+  z-index: 9998;
+  mix-blend-mode: screen;
+  background: radial-gradient(circle, rgba(255,178,44,.95) 0%, rgba(255,94,42,.55) 38%, rgba(255,59,48,.15) 72%, transparent 100%);
+  transform: translate(-50%, -50%);
+  opacity: .82;
+  filter: blur(.6px);
+}
+.cursor-trail{
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  pointer-events: none;
+  z-index: 9997;
+  background: radial-gradient(circle, rgba(255,255,255,.98), rgba(255,178,44,.52), transparent 72%);
+  transform: translate(-50%, -50%);
+  animation: trailFade .55s ease-out forwards;
+}
+@keyframes trailFade{
+  from{ opacity:.95; transform:translate(-50%,-50%) scale(1); }
+  to{ opacity:0; transform:translate(-50%,-50%) scale(2.8); }
+}
+.reddit-burst{
+  position: fixed;
+  width: 28px;
+  height: 28px;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%) scale(.8);
+  animation: redditBurst .8s ease-out forwards;
+  filter: drop-shadow(0 0 18px rgba(255,94,42,.32));
+}
+.reddit-burst svg{ width:100%; height:100%; display:block; }
+@keyframes redditBurst{
+  0%{ opacity:0; transform:translate(-50%,-50%) scale(.35) rotate(-8deg); }
+  18%{ opacity:1; transform:translate(-50%,-50%) scale(1) rotate(0deg); }
+  100%{ opacity:0; transform:translate(-50%,-88%) scale(1.9) rotate(16deg); }
+}
+@media (max-width: 768px){
+  .cursor-glow, .cursor-trail{ display:none !important; }
+}
+
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+
+  const h1 = document.querySelector(".title-hero");
+
+  if (h1) {
+    // cria logo
+    const logoDiv = document.createElement("div");
+    logoDiv.className = "logo-topo";
+
+    const logo = document.createElement("img");
+    logo.src = "logo.png";
+
+    logoDiv.appendChild(logo);
+
+    // insere antes do título
+    h1.parentNode.insertBefore(logoDiv, h1);
+
+    // destaque automático (ajuste palavras se quiser)
+    h1.innerHTML = h1.innerHTML.replace(
+      /(viral|visualizações|resultados|todos os dias)/gi,
+      '<span class=\"destaque\">$1</span>'
+    );
+  }
+
+});
+</script>
+
+<script>
+(function(){
+  const cursorGlow = document.getElementById('cursorGlow');
+  const redditTpl = document.getElementById('redditMiniHead');
+  if (!cursorGlow || !redditTpl) return;
+
+  function moveGlow(x, y){
+    cursorGlow.style.left = x + 'px';
+    cursorGlow.style.top = y + 'px';
+  }
+
+  document.addEventListener('mousemove', (e) => {
+    moveGlow(e.clientX, e.clientY);
+    if (window.innerWidth > 768 && Math.random() > 0.76) {
+      const trail = document.createElement('div');
+      trail.className = 'cursor-trail';
+      trail.style.left = e.clientX + 'px';
+      trail.style.top = e.clientY + 'px';
+      document.body.appendChild(trail);
+      setTimeout(() => trail.remove(), 560);
+    }
+  });
+
+  document.addEventListener('mousedown', (e) => {
+    if (window.innerWidth <= 768) return;
+    cursorGlow.style.width = '34px';
+    cursorGlow.style.height = '34px';
+
+    const burst = document.createElement('div');
+    burst.className = 'reddit-burst';
+    burst.style.left = e.clientX + 'px';
+    burst.style.top = e.clientY + 'px';
+    burst.innerHTML = redditTpl.innerHTML;
+    document.body.appendChild(burst);
+    setTimeout(() => burst.remove(), 820);
+  });
+
+  document.addEventListener('mouseup', () => {
+    cursorGlow.style.width = '22px';
+    cursorGlow.style.height = '22px';
+  });
+})();
+</script>
+
+</body>
+</html>
